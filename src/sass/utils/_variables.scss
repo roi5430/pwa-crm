@@ -1,0 +1,23 @@
+$colors: (
+  'global-bacground': #ffffff,
+
+  'white-text': #ffffff,
+  'black-text': #000000,
+  'primary-text': #d41443,
+  'secondary-text': #ffa5ba,
+  'tertiary-text': #907e82,
+  'copyright-text': #907e82,
+
+  'white-color': #ffffff,
+  'primary-color': #ffb8ca,
+  'secondary-color': #f0d1a5,
+  'tertiary-color': #c2e297,
+  'quaternary-color': #ffa5ba,
+
+  'font-section-color': #fff5f6,
+  'button-color': #d41443,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
