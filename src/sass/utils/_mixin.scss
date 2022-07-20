@@ -1,0 +1,28 @@
+// -------- МИКСИНЫ --------
+// -------- Позиционированные элементы -------
+@mixin positioning($position: relative) {
+    position: $position;
+ }
+
+//  ------ breakpoints(точки перелома макета) --------
+
+// ----- произвольаня ширина до максимальной(max-width) ------ 
+@mixin free-width($width) {
+    @media screen and (max-width: $width) {
+       @content;
+    }
+ }
+
+// ---- ТАБЛЕТКА ---------
+ @mixin tablet() {
+    @media screen and (min-width: 768px) {
+       @content;
+    }
+ }
+ 
+//  ----- ДЕСКТОП версия ------ 
+ @mixin desktop() {
+    @media screen and (min-width: 1200px) {
+       @content;
+    }
+ }
