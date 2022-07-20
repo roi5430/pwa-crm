@@ -1,28 +1,42 @@
 // -------- МИКСИНЫ --------
 // -------- Позиционированные элементы -------
 @mixin positioning($position: relative) {
-    position: $position;
- }
+  position: $position;
+}
+
+// .header {
+//  @include positioning(absolute);
+// }
 
 //  ------ breakpoints(точки перелома макета) --------
 
-// ----- произвольаня ширина до максимальной(max-width) ------ 
+// ----- произвольаня ширина до максимальной(max-width) ------
 @mixin free-width($width) {
-    @media screen and (max-width: $width) {
-       @content;
-    }
- }
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+// .header {
+// @include free-width(767px) {
+//    background-color: #fff;
+// }
+// }
 
 // ---- ТАБЛЕТКА ---------
- @mixin tablet() {
-    @media screen and (min-width: 768px) {
-       @content;
-    }
- }
- 
-//  ----- ДЕСКТОП версия ------ 
- @mixin desktop() {
-    @media screen and (min-width: 1200px) {
-       @content;
-    }
- }
+@mixin tablet() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+// .header {
+// @include tablet{
+//    background-color: #fff;
+// }
+// }
+
+//  ----- ДЕСКТОП версия ------
+@mixin desktop() {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
