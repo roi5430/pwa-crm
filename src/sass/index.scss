@@ -7,6 +7,8 @@
 // ---- mixin ---
 @import './utils/mixin';
 
+@import './utils/global-style';
+
 // ---- PAGES ----
 @import './header';
 @import './hero';
