@@ -25,6 +25,11 @@ p {
   list-style-type: none;
 }
 
+// -------- сброс подчеркиванния ссылок
+.link {
+  text-decoration: none;
+}
+
 // ---- CONTAINER -----
 .container {
   padding-right: 15px;
@@ -36,6 +41,7 @@ p {
   @media screen and (min-width: $mobail) {
     width: 320px;
   }
+
   @media screen and (min-width: $tablet) {
     width: 768px;
   }
@@ -98,7 +104,7 @@ p {
 }
 
 // --- Тот что меньше, розовый
-%title-text-primary {
+%title-text-secondary {
   font-family: $fontSecondary;
   font-style: normal;
   font-weight: 400;
