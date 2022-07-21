@@ -1,0 +1,121 @@
+body {
+  background-color: getColor('global-bacground');
+  color: getColor('black-text');
+
+  font-family: $fontPrimery;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// -------- сброс отсутпов и точек в списках
+.padding-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+// ---- CONTAINER -----
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
+
+  @media screen and (min-width: $mobail) {
+    width: 320px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1200px;
+  }
+}
+
+// ------ ГЛОБАЛЬНЫЕ ПАДИНГИ ДЛЯ СЕКЦИЙ
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+// ------ глобальные параметры картинок
+.img-position {
+  display: block;
+  max-width: 100%;
+}
+
+// ----- Скрывет текст
+.text-delete {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+//  -------- ПЛЕЙСХОЛДЕРЫ -------
+// ------- Заголовки разделов ------
+// --- Тот что больше, красный
+%title-text-primary {
+  font-family: $fontSecondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: getColor('');
+
+  @mixin tablet() {
+    font-size: 48px;
+    line-height: 1.14;
+  }
+
+  @mixin desktop() {
+    font-size: 58px;
+    line-height: 1.13;
+    letter-spacing: 0.06em;
+  }
+}
+
+// --- Тот что меньше, розовый
+%title-text-primary {
+  font-family: $fontSecondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: getColor('secondary-text');
+
+  @mixin tablet() {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @mixin desktop() {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
