@@ -38,15 +38,13 @@ p {
   margin-right: auto;
   outline: 1px solid red;
 
-  @media screen and (min-width: $mobail) {
-    width: 320px;
-  }
+  width: 320px;
 
-  @media screen and (min-width: $tablet) {
+  @include tablet() {
     width: 768px;
   }
 
-  @media screen and (min-width: $desktop) {
+  @include desktop() {
     width: 1200px;
   }
 }
@@ -91,12 +89,12 @@ p {
   text-transform: uppercase;
   color: getColor('');
 
-  @mixin tablet() {
+  @include tablet() {
     font-size: 48px;
     line-height: 1.14;
   }
 
-  @mixin desktop() {
+  @include desktop() {
     font-size: 58px;
     line-height: 1.13;
     letter-spacing: 0.06em;
