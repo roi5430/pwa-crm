@@ -1,22 +1,36 @@
 // ---- Normalize -----
 @import './common';
 
+// ---- utils ------
 // ---- ПЕРЕМЕННЫЕ ----
 @import './utils/variables';
 
 // ---- mixin ---
 @import './utils/mixin';
 
-// ---- global style ----
-@import './utils/global-style';
+// ---- utils ----
+@import './utils/hidden';
+// ===========
 
-// ---- PAGES ----
-@import './header';
-@import './hero';
-@import './products';
-@import './about';
-@import './advantages';
-@import './gallery';
-@import './customer-reviews';
-@import './contacts';
-@import './footer';
+// ---- reset ----
+@import './base/reset';
+// ==========
+
+// ---- components ----
+@import './components/container';
+@import './components/section';
+@import './components/container';
+@import './components/container';
+@import './components/container';
+// ==========
+
+// ---- layout ----
+@import './layout/header';
+@import './layout/hero';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';
