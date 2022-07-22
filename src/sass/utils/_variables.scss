@@ -34,14 +34,6 @@ $colors: (
 // }
 // =================================
 
-// ------- кубик для анимации ------
-$timing-function-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// ----- Пример использования ----
-// .header {
-// transition: color $timing-function-cubic;
-// }
-//  =========================
-
 // --------- ШРИФТЫ -----
 $fontPrimery: 'DM Sans', sans-serif;
 $fontSecondary: 'Titan One', cursive;

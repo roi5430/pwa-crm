@@ -69,4 +69,8 @@ p {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.nav__mob-btn-icon {
+  stroke: #d41443;
 }/*# sourceMappingURL=index.css.map */
