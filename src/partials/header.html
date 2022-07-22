@@ -1,14 +1,55 @@
 <section class="header">
-  <div class="container">
-    <nav class="nav">
-      <a href="" class="nav__logo"
-        ><img src="./images/header/header-logo-1x.png" alt="logo icecream"
-      /></a>
-      <button type="button" class="nav__mob-btn">
-        <svg class="nav__mob-btn-icon" width="20" height="12">
-          <use href="./images/icons.svg#icon-menu-mobile"></use>
-        </svg>
-      </button>
-    </nav>
-  </div>
+    <div class="container">
+        <nav class="nav">
+            <a href="" class="nav__logo">
+                <picture>
+                    <source
+                        srcset="./images/header/header-logo-mobile-1x.png 1x, ./images/header/header-logo-mobile-2x.png 2x"
+                        media="(min-width: 480px)">
+                    <img src="./images/header/header-logo-mobile-1x.png" alt="logo icecream" width="199">
+                </picture>
+            </a>
+            <button type="button" class="nav__mob-btn">
+                <svg class="nav__mob-btn-icon" width="20" height="12">
+                    <use href="./images/icons.svg#icon-menu-mobile"></use>
+                </svg>
+            </button>
+        </nav>
+        <div class="mob-menu is-hidden">
+            <div class="mob-menu-wrap">
+                <button type="button" class="mob-menu__close-btn">
+                    <svg class="mob-menu__close-btn-icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-mob-menu-close-btn"></use>
+                    </svg>
+                </button>
+                <div class="mob-menu__top">
+                    <button type="button" class="mob-menu__close">
+                        <svg class="mob-menu__close-btn-icon" width="20" height="20">
+                            <use href="./images/icons.svg#icon-mob-menu-close-btn"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mob-menu__bottom">
+                    <ul class="mob-menu-list padding-list">
+                        <li class="mob-menu-list__item">
+                            <a href="" class="mob-menu-list__link link mob-active">Home</a>
+                        </li>
+                        <li class="mob-menu-list__item">
+                            <a href="" class="mob-menu-list__link link">About us</a>
+                        </li>
+                        <li class="mob-menu-list__item">
+                            <a href="" class="mob-menu-list__link link">How it’s made?</a>
+                        </li>
+                        <li class="mob-menu-list__item">
+                            <a href="" class="mob-menu-list__link link">Our products</a>
+                        </li>
+                        <li class="mob-menu-list__item">
+                            <a href="" class="mob-menu-list__link link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
