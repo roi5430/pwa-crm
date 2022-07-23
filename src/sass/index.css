@@ -66,6 +66,40 @@ p {
   padding-bottom: 60px;
 }
 
+.btn--product {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  border: none;
+  border-radius: 20px;
+  background-color: #d41443;
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn--product:hover {
+  background-color: #d41342;
+}
+
+.btn--made {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #d41443;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn--made:hover {
+  background-color: #ecebeb;
+}
+
 .img-position {
   display: block;
   max-width: 100%;

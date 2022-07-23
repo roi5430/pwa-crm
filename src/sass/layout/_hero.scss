@@ -1,1 +1,7 @@
+.btn--product {
+  @extend %btn-primary;
+}
 
+.btn--made {
+  @extend %btn-secondary;
+}
