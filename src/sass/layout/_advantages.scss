@@ -1,12 +1,12 @@
 // .advantages__main
 
-.advantages__main {
+.advantages {
   background-color: getColor('font-section-color');
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.advantages__main .container {
+.advantages .container {
   padding-bottom: 60px;
 
   @include tablet {
