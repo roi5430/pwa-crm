@@ -14,11 +14,6 @@
   }
 }
 
-// .advantages__titles
-
-.advantages__titles {
-}
-
 // .advantages__list
 
 .advantages__list {
@@ -37,7 +32,7 @@
 // .advantages__item
 
 .advantages__item {
-  width: 230px;
+  max-width: 230px;
 
   @include tablet {
     width: 180px;
@@ -45,6 +40,7 @@
   }
 
   @include desktop {
+    width: 288px;
     margin-right: 115px;
     // flex-basis: calc((100% - 230px) / 3);
   }
@@ -72,11 +68,6 @@
   }
 }
 
-// .advantages__icon
-
-.advantages__icon {
-}
-
 // .advantages__title
 
 .advantages__title {
@@ -102,6 +93,7 @@
 
   @include desktop {
     height: 65px;
+    margin-bottom: 16px;
     font-size: 58px;
   }
 }
