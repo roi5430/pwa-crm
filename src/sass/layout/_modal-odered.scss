@@ -1,5 +1,6 @@
 // ----- МОДАЛЬНОЕ ОКНО
 .backdrop {
+  display: none;
   @include positioning(fixed);
   left: 0;
   bottom: 0;
