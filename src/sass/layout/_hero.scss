@@ -1,0 +1,111 @@
+.hero {
+  position: relative;
+  padding-top: 194px;
+
+  background-image: url(../images/hero/hero-icecream-mob.png);
+
+  background-repeat: no-repeat;
+  background-position: left 36px bottom 0px;
+  background-color: getColor('primary-color');
+
+  @media screen and (min-width: 385px) and (max-width: 767px) {
+    padding-bottom: 158px;
+    background-position: 50% 100%;
+  }
+  //   @media (min-device-pixel-ratio: 2),
+  //     (min-resolution: 192dpi),
+  //     (min-resolution: 2dppx) {
+  //     background-image: url(../images/hero/hero-icecream-mob.png);
+  //   }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding-bottom: 158px;
+  }
+
+  @include tablet {
+    padding-top: 102px;
+    padding-bottom: 190px;
+    background-image: url(../images/hero/hero-girl-tablet-min.png),
+      url(../images/hero/hero-icecream-tablet.png),
+      url(../images/hero/hero-milk-tablet-min.png);
+    background-position: right 32px bottom, left 248px bottom 0px,
+      left 32px bottom 16px;
+  }
+}
+
+.hero__title {
+  max-width: 218px;
+  font-family: $fontSecondary;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: getColor('white-text');
+
+  margin-bottom: 20px;
+
+  @include tablet {
+    font-size: 22px;
+    line-height: 1.13;
+    max-width: 162px;
+  }
+}
+
+.hero__title--color {
+  font-size: 48px;
+  line-height: 96.5%;
+
+  text-transform: uppercase;
+  color: getColor('primary-text');
+  @include tablet {
+    font-size: 34px;
+    line-height: 90.5%;
+  }
+}
+
+.btn {
+  @extend %btn-primary;
+  font-size: 8px;
+  line-height: 1.25;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+.btn--made {
+  @extend %btn-secondary;
+}
+
+.buttons__list {
+  display: flex;
+}
+
+.buttons__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.achive {
+  display: none;
+}
+
+.hero__text--wrap {
+  display: none;
+  @include tablet {
+    position: absolute;
+    display: block;
+    max-width: 114px;
+    left: 184px;
+    bottom: 56px;
+  }
+}
+
+.hero__text {
+  font-size: 8px;
+  line-height: 150%;
+  color: getColor('white-color');
+  margin-bottom: 7px;
+}
