@@ -1,7 +1,7 @@
 // .advantages__main
 
 .advantages__main {
-  background-color: #fff5f6;
+  background-color: getColor('font-section-color');
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -74,7 +74,7 @@
   height: 56px;
   margin-bottom: 4px;
 
-  font-family: 'Titan One';
+  font-family: $fontSecondary;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -83,7 +83,7 @@
   text-transform: uppercase;
   text-align: left;
 
-  color: #d41443;
+  color: getColor('primary-text');
 
   @include tablet {
     margin-bottom: 13px;
@@ -101,14 +101,14 @@
 // .advantages__text
 
 .advantages__text {
-  font-family: 'DM Sans';
+  font-family: $fontPrimery;
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.66;
   text-align: left;
 
-  color: #000000;
+  color: getColor('black-text');
 
   @include tablet {
     width: 162px;
