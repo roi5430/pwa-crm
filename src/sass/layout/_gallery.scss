@@ -30,8 +30,7 @@
   .container {
     padding-left: 0;
     padding-right: 0;
-    @include tablet() {
-    }
+
     @include desktop() {
       padding-left: 93px;
       padding-right: 94px;
