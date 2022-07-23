@@ -1,2 +1,39 @@
-.btn {
+// ----- RED -----
+%btn-primary {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  font-family: $fontPrimery;
+
+  border: none;
+  border-radius: 20px;
+  background-color: getColor('button-color');
+  color: getColor('white-text');
+
+  @include transitions(background-color);
+
+  &:hover {
+    background-color: getColor('button-hover-red');
+  }
+}
+
+// ---- white -----
+%btn-secondary {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  font-family: $fontPrimery;
+
+  border: none;
+  border-radius: 20px;
+  background-color: getColor('button-white');
+  color: getColor('primary-text');
+
+  @include transitions(background-color);
+
+  &:hover {
+    background-color: getColor('button-hover-white');
+  }
 }
