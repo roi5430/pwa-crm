@@ -1,0 +1,40 @@
+.gallery {
+  margin: 0 auto;
+  @include free-width(767px) {
+    background-image: linear-gradient(
+      #fff5f6 15%,
+      getColor('global-bacground') 15%
+    );
+  }
+
+  @include tablet() {
+    background-image: linear-gradient(
+      #fff5f6 48%,
+      getColor('global-bacground') 48%
+    );
+  }
+
+  @include desktop() {
+    background-image: linear-gradient(
+      #fff5f6 26.7%,
+      getColor('global-bacground') 26.7%
+    );
+  }
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include desktop() {
+      padding-left: 93px;
+      padding-right: 94px;
+    }
+  }
+
+  &.section {
+    padding-top: 0;
+    @include desktop() {
+      padding-top: 60px;
+    }
+  }
+}
