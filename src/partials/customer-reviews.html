@@ -1,44 +1,91 @@
-<section>
+<section class="section reviews">
   <div class="container">
-    <h2>Customers review</h2>
-    <ul>
-      <li>
-        <picture>
-          <source srcset="./images/User1-1x.jpg 1x, ./images/User1-2x.jpg 2x" />
-          <img src="./images/User1-1x.jpg" alt="Users photo" />
-        </picture>
-        <p>
-          Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-          Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
-          ipsum primis in nibh vel risus.
-        </p>
-        <p>Emily, Los Angeles</p>
-      </li>
-      <li>
-        <picture>
-          <source srcset="./images/User2-1x.jpg 1x, ./images/User2-2x.jpg 2x" />
-          <img src="./images/User2-1x.jpg" alt="Users photo" />
-        </picture>
-        <p>
-          Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-          Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
-          ipsum primis in nibh vel risus.
-        </p>
-        <p>Name, Location</p>
-      </li>
-      <li>
-        <picture>
-          <source srcset="./images/User3-1x.jpg 1x, ./images/User3-2x.jpg 2x" />
-          <img src="./images/User3-1x.jpg" alt="Users photo" />
-        </picture>
-        <p></p>
-        <p>
-          Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-          Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem
-          ipsum primis in nibh vel risus.
-        </p>
-        <p>Name, Location</p>
-      </li>
-    </ul>
+    <h2 class="text-delete">Customers review</h2>
+
+    <div class="splide">
+      <div class="splide__slider">
+        <div class="splide__track">
+          <ul class="splide__list padding-list reviews__list">
+            <li class="splide__slide reviews__item">
+              <picture class="reviews__picture">
+                <source
+                  srcset="
+                    ./images/clients-review/User1-1x.jpg 1x,
+                    ./images/clients-review/User1-2x.jpg 2x
+                  "
+                />
+                <img
+                  class="img-position reviews__img"
+                  src="./images/clients-review/User1-1x.jpg"
+                  alt="Users photo"
+                />
+              </picture>
+              <div class="reviews__comment-wrapper">
+                <div class="reviews__comment-wrapper--for-quote">
+                  <p class="reviews__comment">
+                    Nullam viverra consectetuer. Quisque cursus et, porttitor
+                    risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan
+                    congue. Lorem ipsum primis in nibh vel risus.
+                  </p>
+                </div>
+              </div>
+              <p>Emily, Los Angeles</p>
+            </li>
+            <li class="splide__slide reviews__item">
+              <picture class="reviews__picture">
+                <source
+                  srcset="
+                    ./images/clients-review/User2-1x.jpg 1x,
+                    ./images/clients-review/User2-2x.jpg 2x
+                  "
+                />
+                <img
+                  class="img-position reviews__img"
+                  src="./images/clients-review/User2-1x.jpg"
+                  alt="Users photo"
+                />
+              </picture>
+              <div class="reviews__comment-wrapper">
+                <div class="reviews__comment-wrapper--for-quote">
+                  <p class="reviews__comment">
+                    Nullam viverra consectetuer. Quisque cursus et, porttitor
+                    risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan
+                    congue.
+                  </p>
+                </div>
+              </div>
+              <p>Name, Location</p>
+            </li>
+            <li class="splide__slide reviews__item">
+              <picture class="reviews__picture">
+                <source
+                  srcset="
+                    ./images/clients-review/User3-1x.jpg 1x,
+                    ./images/clients-review/User3-2x.jpg 2x
+                  "
+                />
+                <img
+                  class="img-position reviews__img"
+                  src="./images/clients-review/User3-1x.jpg"
+                  alt="Users photo"
+                />
+              </picture>
+              <p></p>
+              <div class="reviews__comment-wrapper">
+                <div class="reviews__comment-wrapper--for-quote">
+                  <p class="reviews__comment">
+                    Nullam viverra consectetuer. Quisque cursus et, porttitor
+                    risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan
+                    congue. Lorem ipsum primis in nibh vel risus. Lorem ipsum
+                    dolor sit amet.
+                  </p>
+                </div>
+              </div>
+              <p>Name, Location</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
