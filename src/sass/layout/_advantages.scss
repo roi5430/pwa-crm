@@ -1,47 +1,134 @@
-.section.advantages__main {
-  background-color: getColor('font-section-color');
+// .advantages__main
+
+.advantages__main {
+  background-color: #fff5f6;
+  padding-top: 0;
+  padding-bottom: 0;
 }
-.container {
+
+.advantages__main .container {
+  padding-bottom: 60px;
+
+  @include desktop {
+    padding-bottom: 120px;
+  }
 }
 
-.advantages {
-  // .advantages__main
+// .advantages__titles
 
-  &__main {
+.advantages__titles {
+}
+
+// .advantages__list
+
+.advantages__list {
+  display: inline-block;
+  margin: 0 auto;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    // gap: 115px;
+  }
+}
+
+// .advantages__item
+
+.advantages__item {
+  width: 230px;
+
+  @include tablet {
+    width: 180px;
+    margin-right: 22px;
   }
 
-  // .advantages__titles
+  @include desktop {
+    margin-right: 115px;
+    // flex-basis: calc((100% - 230px) / 3);
+  }
+}
 
-  &__titles {
+.advantages__item:not(:last-child) {
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+// .advantages__box
+
+.advantages__box {
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 36px;
   }
 
-  // .advantages__list
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
 
-  &__list {
+// .advantages__icon
+
+.advantages__icon {
+}
+
+// .advantages__title
+
+.advantages__title {
+  height: 56px;
+  margin-bottom: 4px;
+
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: left;
+
+  color: #d41443;
+
+  @include tablet {
+    margin-bottom: 13px;
+
+    font-size: 48px;
   }
 
-  // .advantages__item
+  @include desktop {
+    height: 65px;
+    font-size: 58px;
+  }
+}
 
-  &__item {
+// .advantages__text
+
+.advantages__text {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.66;
+  text-align: left;
+
+  color: #000000;
+
+  @include tablet {
+    width: 162px;
+    height: 71px;
+    font-size: 14px;
+    line-height: 1.74;
   }
 
-  // .advantages__box
-
-  &__box {
-  }
-
-  // .advantages__icon
-
-  &__icon {
-  }
-
-  // .advantages__title
-
-  &__title {
-  }
-
-  // .advantages__text
-
-  &__text {
+  @include desktop {
+    width: 288px;
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02em;
   }
 }
