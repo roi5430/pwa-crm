@@ -1,32 +1,40 @@
 .gallery {
   margin: 0 auto;
+  @include free-width(767px) {
+    background-image: linear-gradient(
+      #fff5f6 15%,
+      getColor('global-bacground') 15%
+    );
+  }
+
+  @include tablet() {
+    background-image: linear-gradient(
+      #fff5f6 48%,
+      getColor('global-bacground') 48%
+    );
+  }
+
+  @include desktop() {
+    background-image: linear-gradient(
+      #fff5f6 26.7%,
+      getColor('global-bacground') 26.7%
+    );
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
   .container {
     padding-left: 0;
     padding-right: 0;
+    @include tablet() {
+    }
     @include desktop() {
       padding-left: 93px;
       padding-right: 94px;
-    }
-    @include free-width(767px) {
-      background-image: linear-gradient(
-        #fff5f6 19%,
-        getColor('global-bacground') 19%
-      );
-    }
-
-    @include tablet() {
-      background-image: linear-gradient(
-        #fff5f6 57%,
-        getColor('global-bacground') 57%
-      );
-    }
-
-    @include desktop() {
-      background-image: linear-gradient(
-        #fff5f6 17%,
-        getColor('global-bacground') 17%
-      );
     }
   }
 
