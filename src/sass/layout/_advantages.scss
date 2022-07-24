@@ -36,7 +36,9 @@
 // .advantages__item
 
 .advantages__item {
-  max-width: 230px;
+  @include free-width(767px) {
+    max-width: 230px;
+  }
 
   @include tablet {
     width: 180px;
@@ -51,10 +53,8 @@
 }
 
 .advantages__item:not(:last-child) {
-  margin-bottom: 32px;
-
-  @include tablet {
-    margin-bottom: 0;
+  @include free-width(767px) {
+    margin-bottom: 32px;
   }
 }
 
@@ -78,20 +78,15 @@
   height: 56px;
   margin-bottom: 4px;
 
-  font-family: $fontSecondary;
-  font-style: normal;
-  font-weight: 400;
+  @extend %title-text-primary;
+
   font-size: 36px;
-  line-height: 1.14;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
   text-align: left;
 
   color: getColor('primary-text');
 
   @include tablet {
     margin-bottom: 13px;
-
     font-size: 48px;
   }
 
@@ -114,15 +109,14 @@
 
   color: getColor('black-text');
 
+  // второй плейсхолдер не подходит
+
   @include tablet {
-    width: 162px;
-    height: 71px;
     font-size: 14px;
     line-height: 1.74;
   }
 
   @include desktop {
-    width: 288px;
     font-size: 16px;
     line-height: 1.76;
     letter-spacing: 0.02em;
