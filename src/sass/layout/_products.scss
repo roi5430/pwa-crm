@@ -1,10 +1,18 @@
-.products__title {
-  text-align: center;
-  @extend %title-text-primary;
+.products__sub-title {
+  display: block;
+  @extend %title-text-secondary;
+  margin-bottom: 15px;
 }
 
-.products__sub-title {
-  @extend %title-text-secondary;
+.products__title {
+  @extend %title-text-primary;
+  margin-bottom: 148px;
+  @include tablet {
+    margin-bottom: 158px;
+  }
+  @include desktop {
+    margin-bottom: 281px;
+  }
 }
 
 .products__list {
@@ -14,10 +22,10 @@
 }
 
 .products__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 480px;
+  position: relative;
+  text-align: center;
+  flex-grow: 1;
+  border-radius: 24px;
   min-height: 489px;
 
   @include tablet {
@@ -37,26 +45,77 @@
 }
 
 .products__item:nth-child(1) {
-  background-color: getColor('primary-color');
-  border-radius: 24px;
+  background: getColor('primary-color');
 }
 
 .products__item:nth-child(2) {
-  background-color: getColor('secondary-color');
-  border-radius: 24px;
+  background: getColor('secondary-color');
 }
 
 .products__item:nth-child(3) {
-  background-color: getColor('tertiary-color');
-  border-radius: 24px;
+  background: getColor('tertiary-color');
 }
 
-.products__item::before {
+.products__item:nth-child(1)::before {
   content: '';
+  position: absolute;
   display: block;
-  width: 280px;
-  height: 280px;
-  background-color: tomato;
+  width: 100%;
+  min-height: 280px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+  background-image: url('../images/products/ice-cream-1x.png');
+
+  @include retina {
+    background-image: url('../images/products/ice-cream-2x.png');
+  }
+
+  @include tablet {
+    width: 100%;
+    min-height: 224px;
+    transform: translateY(-138px);
+    background-image: url('../images/products/ice-cream-tab-1x.png');
+    @include retina {
+      background-image: url('../images/products/ice-cream-tab-2x.png');
+    }
+  }
+  @include desktop {
+    width: 100%;
+    min-height: 394px;
+    transform: translateY(-261px);
+    background-image: url('../images/products/ice-cream-desk-1x.png');
+    @include retina {
+      background-image: url('../images/products/ice-cream-desk-2x.png');
+    }
+  }
+}
+
+.products__wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /*max-width: 200px;
+  margin: 0 auto;*/
+  height: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 140px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    padding-top: 86px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include desktop {
+    padding-top: 133px;
+    padding-left: 61px;
+    padding-right: 61px;
+    padding-bottom: 60px;
+  }
 }
 
 .products__item-title {
@@ -71,7 +130,11 @@
 
   color: getColor('white-text');
 
-  margin-bottom: 70px;
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 32px;
+  }
 
   @include desktop {
     font-size: 30px;
@@ -79,21 +142,17 @@
   }
 }
 
-.products__wrap {
+.products__item-title::after {
+  content: '';
   display: block;
-  text-align: center;
-  max-width: 200px;
-  padding-top: 20px;
-  padding-bottom: 40px;
-
-  @include tablet {
-    max-width: 160px;
-  }
-
-  @include desktop {
-    max-width: 241px;
-    padding-bottom: 60px;
-  }
+  margin: 32 auto;
+  width: 26px;
+  height: 6px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-image: url('../images/products/products-dot.svg'),
+    url('../images/products/products-dot.svg'),
+    url('../images/products/products-dot.svg');
+  background-position: 0px 0px, 10px 0px, 20px 0px;
 }
 
 .products__text {
@@ -108,12 +167,23 @@
   color: getColor('white-text');
 
   margin-bottom: 32px;
+
+  @media screen and (min-width: 321px) and (max-width: 767px) {
+    margin-bottom: auto;
+  }
+  @include tablet {
+    line-height: 1.75;
+  }
+  @include desktop {
+    margin-bottom: 60px;
+  }
 }
 
 .products__btn {
   display: inline-block;
-  margin: 0 auto;
   background: none;
   border: none;
   cursor: pointer;
+  align-self: flex-end;
+  margin: 0 auto;
 }
