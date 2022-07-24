@@ -49,3 +49,17 @@
 
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@mixin flexCenter($type: flex, $main-axis: center, $cross-axis: center) {
+  display: $type;
+  justify-content: $main-axis;
+  align-items: $cross-axis;
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}
