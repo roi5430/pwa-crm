@@ -19,6 +19,12 @@
   }
 }
 
+// ----- Пример использования-----
+// .button {
+//   @extend %btn-primary;
+//   padding-bottom: 20px;
+// }
+
 // ---- white -----
 %btn-secondary {
   display: flex;

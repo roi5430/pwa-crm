@@ -1,6 +1,5 @@
 // ----- МОДАЛЬНОЕ ОКНО
 .backdrop {
-  display: none;
   @include positioning(fixed);
   left: 0;
   bottom: 0;
@@ -10,22 +9,21 @@
 
   background: rgba(0, 0, 0, 0.2);
 
-  // opacity: 0;
-  // pointer-events: none;
-  // visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 
-  //  transition: opacity $timing-function-cubic, pointer-events $timing-function-cubic,
-  //     visibility $timing-function-cubic;
+  @include transitions(opacity, pointer-events, visibility);
 
-  //   &.is-hidden {
-  //     opacity: 1;
-  //     pointer-events: auto;
-  //     visibility: visible;
-  //   }
+  &.is-hidden {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
 
-  //   @media screen and (max-wodth: 767px) {
-  //     padding: 94px 15px;
-  //   }
+  @media screen and (max-wodth: 767px) {
+    padding: 60px 20px;
+  }
 
   &__modal {
     @include positioning(relative);
