@@ -10,10 +10,11 @@
   border-radius: 20px;
   background-color: getColor('button-color');
   color: getColor('white-text');
-
+  cursor: pointer;
   @include transitions(background-color);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: getColor('button-hover-red');
   }
 }
@@ -36,10 +37,11 @@
   border-radius: 20px;
   background-color: getColor('button-white');
   color: getColor('primary-text');
-
+  cursor: pointer;
   @include transitions(background-color);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: getColor('button-hover-white');
   }
 }
