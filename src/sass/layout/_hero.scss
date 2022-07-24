@@ -1,15 +1,16 @@
-// .alignment {
-//   position: relative;
-// }
+.alignment {
+  position: relative;
+}
 
 .hero {
   position: relative;
   padding-top: 194px;
+  overflow: hidden;
 
-  background-image: url(../images/hero/hero-icecream-mob.png);
+  // background-image: url(../images/hero/hero-icecream-mob.png);
 
-  background-repeat: no-repeat;
-  background-position: left 36px bottom 0px;
+  // background-repeat: no-repeat;
+  // background-position: left 36px bottom 0px;
   background-color: getColor('primary-color');
 
   @media screen and (min-width: 385px) and (max-width: 767px) {
@@ -29,21 +30,21 @@
   @include tablet {
     padding-top: 102px;
     padding-bottom: 56px;
-    background-image: url(../images/hero/hero-girl-tablet-min.png),
-      url(../images/hero/hero-icecream-tablet.png),
-      url(../images/hero/hero-milk-tablet-min.png);
-    background-position: right 28px bottom, left 248px bottom 0px,
-      left 23px bottom 16px;
+    // background-image: url(../images/hero/hero-girl-tablet-min.png),
+    //   url(../images/hero/hero-icecream-tablet.png),
+    //   url(../images/hero/hero-milk-tablet-min.png);
+    // background-position: right 28px bottom, left 248px bottom 0px,
+    //   left 23px bottom 16px;
   }
 
   @include desktop {
     padding-top: 147px;
     padding-bottom: 84px;
-    background-image: url(../images/hero/hero-girl-desc-min.png),
-      url(../images/hero/hero-icecream-desctop.png),
-      url(../images/hero/hero-milk-desc-min.png);
-    background-position: right 16px bottom, left 477px bottom 0px,
-      left 16px bottom 60px;
+    // background-image: url(../images/hero/hero-girl-desc-min.png),
+    //   url(../images/hero/hero-icecream-desctop.png),
+    //   url(../images/hero/hero-milk-desc-min.png);
+    // background-position: right 16px bottom, left 477px bottom 0px,
+    //   left 16px bottom 60px;
   }
 }
 
@@ -133,6 +134,11 @@
   &:not(:last-child) {
     margin-right: 8px;
   }
+  @include desktop {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
 }
 
 .achive {
@@ -169,7 +175,7 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    right: -8px;
+    right: -4px;
     z-index: -1;
   }
   @include desktop {
@@ -230,6 +236,7 @@
     max-width: 200px;
     left: 229px;
     bottom: 84px;
+    margin-left: 213px;
   }
 }
 
@@ -253,9 +260,53 @@
   background-color: transparent;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 
   @include desktop {
     width: 26px;
     height: 26px;
+  }
+}
+
+.icecream {
+  position: absolute;
+  bottom: 0px;
+  left: 36px;
+
+  @include tablet {
+    left: 248px;
+  }
+  @include desktop {
+    left: 517px;
+  }
+}
+
+.girl {
+  display: none;
+  @include tablet {
+    display: block;
+    position: absolute;
+    right: 32px;
+    bottom: -56px;
+  }
+  @include desktop {
+    right: 16px;
+    bottom: -84px;
+  }
+}
+.milk {
+  display: none;
+  @include tablet {
+    display: block;
+    position: absolute;
+    left: 32px;
+    bottom: -40px;
+  }
+
+  @include desktop {
+    display: block;
+    position: absolute;
+    left: 16px;
+    bottom: -40px;
   }
 }
