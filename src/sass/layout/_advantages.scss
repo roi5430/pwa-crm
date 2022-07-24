@@ -1,0 +1,124 @@
+// .advantages__main
+
+.advantages {
+  background-color: getColor('font-section-color');
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.advantages .container {
+  padding-bottom: 60px;
+
+  @include tablet {
+    padding: 0 32px 60px;
+  }
+
+  @include desktop {
+    padding: 0 16px 60px;
+  }
+}
+
+// .advantages__list
+
+.advantages__list {
+  display: inline-block;
+  margin: 0 auto;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    // gap: 115px;
+  }
+}
+
+// .advantages__item
+
+.advantages__item {
+  @include free-width(767px) {
+    max-width: 230px;
+  }
+
+  @include tablet {
+    width: 180px;
+    margin-right: 22px;
+  }
+
+  @include desktop {
+    width: 288px;
+    margin-right: 115px;
+    // flex-basis: calc((100% - 230px) / 3);
+  }
+}
+
+.advantages__item:not(:last-child) {
+  @include free-width(767px) {
+    margin-bottom: 32px;
+  }
+}
+
+// .advantages__box
+
+.advantages__box {
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 36px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+// .advantages__title
+
+.advantages__title {
+  height: 56px;
+  margin-bottom: 4px;
+
+  @extend %title-text-primary;
+
+  font-size: 36px;
+  text-align: left;
+
+  color: getColor('primary-text');
+
+  @include tablet {
+    margin-bottom: 13px;
+    font-size: 48px;
+  }
+
+  @include desktop {
+    height: 65px;
+    margin-bottom: 16px;
+    font-size: 58px;
+  }
+}
+
+// .advantages__text
+
+.advantages__text {
+  font-family: $fontPrimery;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.66;
+  text-align: left;
+
+  color: getColor('black-text');
+
+  // второй плейсхолдер не подходит
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.74;
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02em;
+  }
+}
