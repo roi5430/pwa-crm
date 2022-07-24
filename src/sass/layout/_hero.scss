@@ -1,9 +1,10 @@
 .alignment {
-  position: relative;
+  // position: relative;
+  @include positioning;
 }
 
 .hero {
-  position: relative;
+  // position: relative;
   padding-top: 194px;
   overflow: hidden;
 
