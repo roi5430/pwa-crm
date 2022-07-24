@@ -8,19 +8,19 @@
   font-size: 34px;
   line-height: 1.14;
   text-align: center;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: getColor('primary-text');
 
   @include tablet() {
     font-size: 48px;
     line-height: 1.14;
+    letter-spacing: 0.06em;
   }
 
   @include desktop() {
     font-size: 58px;
     line-height: 1.13;
-    letter-spacing: 0.06em;
   }
 }
 
