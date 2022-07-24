@@ -11,23 +11,23 @@
     
 }
 .footer__box {
+    margin-bottom: 40px;
     @include tablet() {
+        
         display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
+
+    @include desktop{
+        margin-bottom: 60px;
+    }
 }
 .footer__title {
     margin-bottom: 16px;
     text-align: left; 
 
     @extend %title-text-secondary;
-
-    // font-family: $fontSecondary;
-    // font-style: normal;
-    // font-weight: 400;
-    // font-size: 18px;
-    // line-height: 1.17;
-    // text-transform: uppercase;
-    // color: #FFA5BA;
 
     @include tablet(){ 
         font-size: 26px;
@@ -41,17 +41,9 @@
     }
 }
 .footer__title-second {
-    margin-bottom: 40px;
+   
     @extend %title-text-primary;
     text-align: left;
-    // font-style: normal;
-    // font-weight: 400;
-    // font-size: 34px;
-    // line-height: 1.15;
-    // letter-spacing: 0.04em;
-    // text-transform: uppercase;
-
-color: getColor('primary-text');
 
 @include tablet(){ 
     font-size: 48px;           
@@ -60,17 +52,6 @@ color: getColor('primary-text');
     font-size: 58px;
     line-height: 1.14;           
 }
-}
-
-.footer__contact{
-    @include tablet() {
-    display: block;
-    margin-left: auto;
-    margin-top: 60px;
-}
- @include desktop() {
-    margin-top: 12px;
- }
 }
 
 .container,.footer__container{
@@ -86,15 +67,8 @@ color: getColor('primary-text');
     display: flex;
     margin-bottom: 40px;
     justify-content: flex-end;
-    @include tablet(){
-        width: 100%;
-        
-    }
 }
 
-// .footer__item:not(last-chaild) {
-//     padding-right: 28px;
-// }
 .footer__list {
     gap: 28px;
 }
@@ -125,7 +99,6 @@ color: getColor('primary-text');
 //     margin-bottom: 16px;
 // }
 
-// .footer__line
 hr {
     display: block;
     border-width: 0;
@@ -139,7 +112,6 @@ hr {
     @include tablet(){
         margin-bottom: 8px;
         width: 100%;
-
     }
 }
 
@@ -155,8 +127,6 @@ hr {
     font-size: 14px;
     line-height: 1.52;
     text-align: center;
-    
-  
     color: getColor('copyright-text');
 
     @include tablet(){
@@ -165,9 +135,7 @@ hr {
     }
 }
  .footer__tel {
-    padding-bottom: 40px;
     font-family: 'DM Sans';
-  
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
