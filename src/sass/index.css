@@ -93,13 +93,6 @@ p {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    padding-right: 32px;
-    padding-left: 32px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
     padding-right: 16px;
     padding-left: 16px;
   }
