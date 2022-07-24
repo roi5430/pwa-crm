@@ -7,21 +7,12 @@
   padding-top: 194px;
   overflow: hidden;
 
-  // background-image: url(../images/hero/hero-icecream-mob.png);
-
-  // background-repeat: no-repeat;
-  // background-position: left 36px bottom 0px;
   background-color: getColor('primary-color');
 
   @media screen and (min-width: 385px) and (max-width: 767px) {
     padding-bottom: 158px;
     background-position: 50% 100%;
   }
-  //   @media (min-device-pixel-ratio: 2),
-  //     (min-resolution: 192dpi),
-  //     (min-resolution: 2dppx) {
-  //     background-image: url(../images/hero/hero-icecream-mob.png);
-  //   }
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
     padding-bottom: 158px;
@@ -30,21 +21,11 @@
   @include tablet {
     padding-top: 102px;
     padding-bottom: 56px;
-    // background-image: url(../images/hero/hero-girl-tablet-min.png),
-    //   url(../images/hero/hero-icecream-tablet.png),
-    //   url(../images/hero/hero-milk-tablet-min.png);
-    // background-position: right 28px bottom, left 248px bottom 0px,
-    //   left 23px bottom 16px;
   }
 
   @include desktop {
     padding-top: 147px;
     padding-bottom: 84px;
-    // background-image: url(../images/hero/hero-girl-desc-min.png),
-    //   url(../images/hero/hero-icecream-desctop.png),
-    //   url(../images/hero/hero-milk-desc-min.png);
-    // background-position: right 16px bottom, left 477px bottom 0px,
-    //   left 16px bottom 60px;
   }
 }
 
