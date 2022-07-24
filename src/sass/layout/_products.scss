@@ -46,10 +46,16 @@
 
 .products__item:nth-child(1) {
   background: getColor('primary-color');
+  @media screen and (max-width: 767px) {
+    margin-bottom: 140px;
+  }
 }
 
 .products__item:nth-child(2) {
   background: getColor('secondary-color');
+  @media screen and (max-width: 767px) {
+    margin-bottom: 140px;
+  }
 }
 
 .products__item:nth-child(3) {
@@ -88,6 +94,78 @@
     background-image: url('../images/products/ice-cream-desk-1x.png');
     @include retina {
       background-image: url('../images/products/ice-cream-desk-2x.png');
+    }
+  }
+}
+
+.products__item:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  min-height: 280px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+  background-image: url('../images/products/coffee-1x.png');
+
+  @include retina {
+    background-image: url('../images/products/coffee-2x.png');
+  }
+
+  @include tablet {
+    width: 100%;
+    min-height: 224px;
+    transform: translateY(-138px);
+    background-image: url('../images/products/coffee-tab-1x.png');
+    @include retina {
+      background-image: url('../images/products/coffee-tab-2x.png');
+    }
+  }
+  @include desktop {
+    width: 100%;
+    min-height: 394px;
+    transform: translateY(-261px);
+    background-image: url('../images/products/coffee-desk-1x.png');
+    @include retina {
+      background-image: url('../images/products/coffee-desk-2x.png');
+    }
+  }
+}
+
+.products__item:nth-child(3)::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  min-height: 280px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+  background-image: url('../images/products/milkshake-1x.png');
+
+  @include retina {
+    background-image: url('../images/products/milkshake-2x.png');
+  }
+
+  @include tablet {
+    width: 100%;
+    min-height: 224px;
+    transform: translateY(-138px);
+    background-image: url('../images/products/milkshake-tab-1x.png');
+    @include retina {
+      background-image: url('../images/products/milkshake-tab-2x.png');
+    }
+  }
+  @include desktop {
+    width: 100%;
+    min-height: 394px;
+    transform: translateY(-261px);
+    background-image: url('../images/products/milkshake-desk-1x.png');
+    @include retina {
+      background-image: url('../images/products/milkshake-desk-2x.png');
     }
   }
 }
