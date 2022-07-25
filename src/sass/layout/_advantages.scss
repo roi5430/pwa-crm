@@ -42,11 +42,11 @@
 
   @include tablet {
     width: 180px;
-    margin-right: 22px;
+    margin-right: 25px;
   }
 
   @include desktop {
-    width: 288px;
+    width: 290px;
     margin-right: 115px;
     // flex-basis: calc((100% - 230px) / 3);
   }
@@ -54,7 +54,7 @@
 
 .advantages__item:not(:last-child) {
   @include free-width(767px) {
-    margin-bottom: 32px;
+    margin-bottom: 35px;
   }
 }
 
@@ -76,7 +76,7 @@
 
 .advantages__title {
   height: 56px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 
   @extend %title-text-primary;
 
@@ -88,12 +88,14 @@
   @include tablet {
     margin-bottom: 13px;
     font-size: 48px;
+    letter-spacing: 0.04em;
   }
 
   @include desktop {
     height: 65px;
     margin-bottom: 16px;
     font-size: 58px;
+    letter-spacing: 0.04em;
   }
 }
 
