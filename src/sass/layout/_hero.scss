@@ -6,18 +6,18 @@
 .hero {
   // position: relative;
   padding-top: 194px;
+  padding-bottom: 158px;
   overflow: hidden;
 
   background-color: getColor('primary-color');
 
-  @media screen and (min-width: 385px) and (max-width: 767px) {
-    padding-bottom: 158px;
-    background-position: 50% 100%;
-  }
+  // @media screen and (min-width: 385px) and (max-width: 767px) {
+  //   background-position: 50% 100%;
+  // }
 
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    padding-bottom: 158px;
-  }
+  // @media screen and (min-width: 320px) and (max-width: 767px) {
+  //   padding-bottom: 158px;
+  // }
 
   @include tablet {
     padding-top: 102px;
@@ -38,10 +38,14 @@
   @include tablet {
     margin-bottom: 61px;
   }
+  @include desktop {
+    margin-bottom: 108px;
+  }
 }
 
 .hero__title {
-  max-width: 218px;
+  display: flex;
+  flex-direction: column;
   font-family: $fontSecondary;
   font-weight: 400;
   font-size: 26px;
@@ -160,10 +164,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 8px;
+    margin-right: 8px;
   }
   @include tablet {
-    padding-right: 15px;
+    margin-right: 15px;
   }
 }
 
@@ -240,7 +244,7 @@
   @include tablet {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    // align-items: flex-start;
     max-width: 114px;
     // left: 184px;
     // bottom: 56px;
@@ -324,6 +328,6 @@
     display: block;
     position: absolute;
     left: 16px;
-    bottom: -40px;
+    bottom: -24px;
   }
 }
