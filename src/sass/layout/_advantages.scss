@@ -23,15 +23,16 @@
 .advantages__list {
   display: inline-block;
   margin: 0 auto;
-  padding-right: 177px;
 
   @include tablet {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin: 0;
+  }
+
+  @include free-width(1199px) {
     padding-right: 177px;
-    // gap: 115px;
   }
 }
 
@@ -39,27 +40,21 @@
 
 .advantages__item {
   @include free-width(767px) {
-    max-width: 230px;
-  }
-
-  @include tablet {
-  bugfix/advantages2507
-    margin-bottom: 0;
-  }
-
-  @include desktop {
-    margin-right: 115px;
-    // flex-basis: calc((100% - 230px) / 3);
+    width: 230px;
   }
 }
 
 .advantages__item:not(:last-child) {
   @include free-width(767px) {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 
   @include tablet {
-    margin-right: 10px;
+    margin-right: 25px;
+  }
+
+  @include desktop {
+    margin-right: 115px;
   }
 }
 
