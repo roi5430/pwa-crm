@@ -1,0 +1,48 @@
+//  -------- ПЛЕЙСХОЛДЕРЫ -------
+// ------- Заголовки разделов ------
+// --- Тот что больше, красный
+%title-text-primary {
+  font-family: $fontSecondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: getColor('primary-text');
+
+  @include tablet() {
+    font-size: 48px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
+
+  @include desktop() {
+    font-size: 58px;
+    line-height: 1.13;
+  }
+}
+
+// --- Тот что меньше, розовый
+%title-text-secondary {
+  font-family: $fontSecondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: getColor('secondary-text');
+
+  @mixin tablet() {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @mixin desktop() {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
