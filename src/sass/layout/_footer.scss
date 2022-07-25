@@ -1,6 +1,10 @@
 // .mob-menu {display: none;}
 .footer {
     background-color: getColor('font-section-color');
+
+    @include desktop(){
+    padding-top: 60px;
+}
 }
 .footer__title-box{
     // max-width: 234px;
@@ -78,7 +82,8 @@ color: getColor('primary-text');
     @include tablet() {
     display: block;
     margin-left: auto;
-    margin-top: 60px;
+    padding-top: 60px;
+
 }
  @include desktop() {
     margin-top: 12px;
