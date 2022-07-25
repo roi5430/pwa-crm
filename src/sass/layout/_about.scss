@@ -31,6 +31,16 @@
 //     width: 1200px;
 //   }
 // }
+.container {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
 
 .about__list {
   display: flex;
