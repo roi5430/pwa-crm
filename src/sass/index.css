@@ -93,13 +93,15 @@ p {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 
@@ -108,25 +110,7 @@ p {
   padding-bottom: 60px;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-family: "DM Sans", sans-serif;
-  border: none;
-  border-radius: 20px;
-  background-color: #d41443;
-  color: #ffffff;
-  cursor: pointer;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.btn:hover, .btn:focus {
-  background-color: #d41342;
-}
-
-.about__button, .btn--made, .buy-now-button {
+.about__button, .buy-now-button {
   display: flex;
   align-items: center;
   text-align: center;
@@ -140,7 +124,7 @@ p {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.about__button:hover, .btn--made:hover, .buy-now-button:hover, .about__button:focus, .btn--made:focus, .buy-now-button:focus {
+.about__button:hover, .buy-now-button:hover, .about__button:focus, .buy-now-button:focus {
   background-color: #ecebeb;
 }
 
@@ -373,8 +357,10 @@ p {
 }
 
 .achive-title--wrap {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  z-index: 99;
 }
 @media screen and (min-width: 768px) {
   .achive-title--wrap {
@@ -428,41 +414,69 @@ p {
   }
 }
 
-.btn {
+.hero-list__products {
+  display: block;
+  font-style: normal;
   font-size: 8px;
+  color: #ffffff;
   line-height: 1.25;
+  background: #d41443;
+  border-radius: 20px;
   padding-top: 7px;
   padding-bottom: 7px;
   padding-right: 14px;
   padding-left: 14px;
 }
+.hero-list__products:hover, .hero-list__products:focus {
+  background: #d41342;
+}
 @media screen and (min-width: 1200px) {
-  .btn {
+  .hero-list__products {
     font-size: 14px;
     line-height: 1.28;
     padding-top: 11px;
     padding-bottom: 11px;
-    padding-right: 24px;
-    padding-left: 24px;
+    padding-right: 22px;
+    padding-left: 22px;
   }
 }
 
+.hero-list__made {
+  display: block;
+  font-style: normal;
+  font-size: 8px;
+  line-height: 1.25;
+  color: #d41443;
+  background: #ffffff;
+  border-radius: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.hero-list__made:hover, .hero-list__made:focus {
+  background: #ecebeb;
+}
 @media screen and (min-width: 1200px) {
-  .btn--made {
-    padding-right: 20px;
-    padding-left: 20px;
+  .hero-list__made {
+    font-size: 14px;
+    line-height: 1.28;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 17px;
+    padding-left: 17px;
   }
 }
 
-.buttons__list {
+.hero-list {
   display: flex;
 }
 
-.buttons__item:not(:last-child) {
+.hero-list__item:not(:last-child) {
   margin-right: 8px;
 }
 @media screen and (min-width: 1200px) {
-  .buttons__item:not(:last-child) {
+  .hero-list__item:not(:last-child) {
     margin-right: 12px;
   }
 }
@@ -549,6 +563,8 @@ p {
 
 .hero__text--wrap {
   display: none;
+  position: relative;
+  z-index: 99;
 }
 @media screen and (min-width: 768px) {
   .hero__text--wrap {
@@ -562,8 +578,6 @@ p {
 @media screen and (min-width: 1200px) {
   .hero__text--wrap {
     max-width: 200px;
-    left: 229px;
-    bottom: 84px;
     margin-left: 213px;
   }
 }
@@ -600,22 +614,26 @@ p {
 
 .icecream {
   position: absolute;
-  bottom: 0px;
+  bottom: -158px;
   left: 36px;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .icecream {
     left: 248px;
+    bottom: -56px;
   }
 }
 @media screen and (min-width: 1200px) {
   .icecream {
-    left: 517px;
+    left: 501px;
+    bottom: -84px;
   }
 }
 
 .girl {
   display: none;
+  z-index: 99;
 }
 @media screen and (min-width: 768px) {
   .girl {
