@@ -82,7 +82,7 @@
   }
 }
 
-.link__products {
+.hero-list__products {
   display: block;
   font-style: normal;
   font-size: 8px;
@@ -110,7 +110,7 @@
   }
 }
 
-.link__made {
+.hero-list__made {
   display: block;
   font-style: normal;
   font-size: 8px;
@@ -139,11 +139,11 @@
   }
 }
 
-.hero-link__list {
+.hero-list {
   display: flex;
 }
 
-.hero-link__item {
+.hero-list__item {
   &:not(:last-child) {
     margin-right: 8px;
   }
