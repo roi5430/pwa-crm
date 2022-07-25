@@ -26,18 +26,6 @@
 
 .reviews__comment-general-wrapper {
   margin-bottom: 16px;
-  &::after {
-    text-indent: 10px;
-    content: '...';
-    display: inline-block;
-    font-size: 40px;
-    color: #c7133e;
-    letter-spacing: 10px;
-    line-height: 16px;
-    @include tablet {
-      line-height: 40px;
-    }
-  }
 }
 
 .reviews__comment-wrapper {
@@ -89,14 +77,22 @@
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding-left: 45px;
     padding-right: 50px;
+    padding-bottom: 44px;
 
-    background: repeating-linear-gradient(
-      to bottom,
-      transparent,
-      transparent 29px,
-      transparent 29px,
-      #e1e1e1 31px
-    );
+    background-image: linear-gradient(
+        to top,
+        #fafafa,
+        #fafafa 34px,
+        transparent 34px,
+        transparent
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 29px,
+        transparent 29px,
+        #e1e1e1 31px
+      );
   }
 
   &::before {
@@ -139,6 +135,26 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.86;
+
+  &::before {
+    content: '';
+    display: block;
+    margin-top: 16px;
+    margin-right: auto;
+    margin-bottom: 16px;
+    margin-left: auto;
+    width: 32px;
+    height: 4px;
+    background-image: url(../images/clients-review/ellipse.svg),
+      url(../images/clients-review/ellipse.svg),
+      url(../images/clients-review/ellipse.svg);
+    background-size: 4px, 4px, 4px;
+    background-position: top 0px left 0px, top 0px left 14px, top 0px left 28px;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 4px;
+    }
+  }
 }
 
 .splide__pagination {
@@ -167,18 +183,4 @@
 .splide__pagination__page {
   width: 12px;
   height: 12px;
-}
-
-//to delete
-.is-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
