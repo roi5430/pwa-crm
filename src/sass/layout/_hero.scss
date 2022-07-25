@@ -31,9 +31,10 @@
 }
 
 .achive-title--wrap {
-  // position: relative;
+  @include positioning;
   display: flex;
   justify-content: space-between;
+  z-index: 99;
   @include tablet {
     margin-bottom: 61px;
   }
@@ -81,38 +82,68 @@
   }
 }
 
-.btn {
-  @extend %btn-primary;
+.hero-list__products {
+  display: block;
+  font-style: normal;
   font-size: 8px;
+  color: getColor('white-text');
   line-height: 1.25;
+  background: getColor('button-color');
+  border-radius: 20px;
   padding-top: 7px;
   padding-bottom: 7px;
   padding-right: 14px;
   padding-left: 14px;
+
+  &:hover,
+  &:focus {
+    background: getColor('button-hover-red');
+  }
 
   @include desktop {
     font-size: 14px;
     line-height: 1.28;
     padding-top: 11px;
     padding-bottom: 11px;
-    padding-right: 24px;
-    padding-left: 24px;
+    padding-right: 22px;
+    padding-left: 22px;
   }
 }
 
-.btn--made {
-  @extend %btn-secondary;
+.hero-list__made {
+  display: block;
+  font-style: normal;
+  font-size: 8px;
+  line-height: 1.25;
+
+  color: getColor('button-color');
+  background: getColor('button-white');
+  border-radius: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  &:hover,
+  &:focus {
+    background: getColor('button-hover-white');
+  }
+
   @include desktop {
-    padding-right: 20px;
-    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.28;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 17px;
+    padding-left: 17px;
   }
 }
 
-.buttons__list {
+.hero-list {
   display: flex;
 }
 
-.buttons__item {
+.hero-list__item {
   &:not(:last-child) {
     margin-right: 8px;
   }
@@ -204,8 +235,9 @@
 
 .hero__text--wrap {
   display: none;
+  @include positioning;
+  z-index: 99;
   @include tablet {
-    // position: absolute;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -216,8 +248,7 @@
   }
   @include desktop {
     max-width: 200px;
-    left: 229px;
-    bottom: 84px;
+
     margin-left: 213px;
   }
 }
@@ -252,19 +283,23 @@
 
 .icecream {
   position: absolute;
-  bottom: 0px;
+  bottom: -158px;
   left: 36px;
+  z-index: 1;
 
   @include tablet {
     left: 248px;
+    bottom: -56px;
   }
   @include desktop {
-    left: 517px;
+    left: 501px;
+    bottom: -84px;
   }
 }
 
 .girl {
   display: none;
+  z-index: 99;
   @include tablet {
     display: block;
     position: absolute;
