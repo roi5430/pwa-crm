@@ -40,6 +40,7 @@
   font-size: 16px;
   line-height: 1.31;
   color: getColor('white-text');
+  padding: 20px 0;
   @include transitions(color);
   &:hover,
   &:focus {
@@ -135,7 +136,7 @@
         line-height: 1.31;
         width: 100%;
         justify-content: center;
-        margin-bottom: 20px;
+        
         min-width: 160px;
         @include transitions(background-color);
         &:hover,
@@ -149,12 +150,12 @@
       display: none;
           @include tablet {
             display: block;
-            margin-bottom: 0;
           }
     }
 
 .mob-menu__top {
   padding: 0 20px;
+  margin-bottom: 20px;
 }
 
 .mob-menu__buy-now-button-icon {
@@ -163,10 +164,7 @@
 }
 
 .mob-menu-list__item {
-  padding-top: 11px;
-  padding-bottom: 13px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 11px 20px;
   border-top: 1px solid #e18298;
   border-bottom: 1px solid #e18298;
 }
