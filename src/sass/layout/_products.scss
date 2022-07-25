@@ -2,6 +2,12 @@
   display: block;
   @extend %title-text-secondary;
   margin-bottom: 15px;
+  @include tablet {
+    margin-bottom: 18px;
+  }
+  @include desktop {
+    margin-bottom: 16px;
+  }
 }
 
 .products__title {
@@ -26,16 +32,13 @@
   text-align: center;
   flex-grow: 1;
   border-radius: 24px;
-  min-height: 489px;
 
   @include tablet {
     width: calc((100% - 32px) / 3);
-    min-height: 473px;
     margin-right: 16px;
   }
   @include desktop {
     width: calc((100% - 64px) / 3);
-    min-height: 535px;
     margin-right: 32px;
   }
 }
@@ -180,7 +183,6 @@
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 140px;
-  padding-bottom: 40px;
 
   @include tablet {
     padding-top: 86px;
@@ -192,7 +194,6 @@
     padding-top: 133px;
     padding-left: 61px;
     padding-right: 61px;
-    padding-bottom: 60px;
   }
 }
 
@@ -246,22 +247,27 @@
 
   margin-bottom: 32px;
 
-  @media screen and (min-width: 321px) and (max-width: 767px) {
-    margin-bottom: auto;
-  }
   @include tablet {
     line-height: 1.75;
+    margin-bottom: auto;
   }
   @include desktop {
-    margin-bottom: 60px;
+    margin-bottom: auto;
   }
 }
 
 .products__btn {
-  display: inline-block;
+  display: flex;
   background: none;
   border: none;
   cursor: pointer;
-  align-self: flex-end;
-  margin: 0 auto;
+  padding: 0;
+  margin: 0 auto 40px;
+  @include tablet {
+    margin-top: 32px;
+  }
+  @include desktop {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
