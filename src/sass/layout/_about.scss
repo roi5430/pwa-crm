@@ -129,6 +129,7 @@
 }
 
 .about-section {
+  background-color: getColor('font-section-color');
   @include free-width(767px) {
     padding-bottom: 40px;
   }
