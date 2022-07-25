@@ -32,14 +32,16 @@
   
     @include desktop() {
       display: flex;
+      gap: 35px;
     }
   }
-.menu__item {
-margin-right: 35px;
-&:last-child {
-  margin-right: 0;
-}
-}
+  
+// .menu__item {
+// margin-right: 35px;
+// &:last-child {
+//   margin-right: 0;
+// }
+// }
 
   
 .menu__link {
@@ -59,12 +61,10 @@ margin-right: 35px;
 
 .header__btn-wrap {
   margin-left: auto;
-  @include tablet() {
-      display: flex;
-      align-items: center;
-    }
-
-}
+  display: flex;
+    align-items: center;
+  }
+  
 .nav__mob-btn {
   background-color: transparent;
   display: block;
