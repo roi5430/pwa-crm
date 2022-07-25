@@ -92,12 +92,14 @@
   @include tablet {
     margin-bottom: 13px;
     font-size: 48px;
+    letter-spacing: 0.04em;
   }
 
   @include desktop {
     height: 65px;
     margin-bottom: 16px;
     font-size: 58px;
+    letter-spacing: 0.04em;
   }
 }
 
