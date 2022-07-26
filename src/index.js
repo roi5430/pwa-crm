@@ -25,7 +25,7 @@ const splide = new Splide('.splide', {
   const refs = {
     openMenuBtn: document.querySelector('.nav__mob-btn'),
     closeMenuBtn: document.querySelector('.mob-menu__close-btn'),
-    menu: document.querySelector('.mob-menu'),
+    menu: document.querySelector('.backdrop-mb-menu'),
     body: document.querySelector('body'),
   };
 
@@ -34,6 +34,6 @@ const splide = new Splide('.splide', {
 
   function toggleMenu() {
     refs.menu.classList.toggle('is-hidden');
-    refs.body.classList.toggle('no-scroll');
+    refs.body.classList.toggle('no-scroll-body');
   }
 })();
