@@ -190,12 +190,14 @@
 }
 
 .mob-menu-list__item {
-  padding: 11px 20px;
   border-top: 1px solid #e18298;
   border-bottom: 1px solid #e18298;
 }
 
 .mob-menu-list__link {
+  display: inline-block;
+  width: 100%;
+  padding: 11px 20px;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
