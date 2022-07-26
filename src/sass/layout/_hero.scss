@@ -166,9 +166,9 @@
     align-items: flex-end;
     margin-right: 8px;
   }
-  @include tablet {
-    margin-right: 15px;
-  }
+  // @include tablet {
+  //   margin-right: 15px;
+  // }
 }
 
 .achive__amount {
@@ -192,7 +192,7 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    right: -4px;
+    right: -8px;
     z-index: -1;
   }
   @include desktop {
@@ -300,15 +300,15 @@
     bottom: -84px;
   }
 }
-
 .girl {
   display: none;
-  z-index: 99;
+
   @include tablet {
     display: block;
     position: absolute;
     right: 32px;
     bottom: -56px;
+    z-index: 99;
   }
   @include desktop {
     right: 16px;
