@@ -322,19 +322,18 @@
     padding: 100px 30px 100px;
   }
   @include desktop {
-    padding: 150px 40px 100px;
+    padding: 150px 45px 100px;
   }
 }
 
 .products-info__text {
-  font-family: $fontPrimery;
+  font-family: 'DM Sans';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
-  letter-spacing: 0.04em;
 
-  color: getColor('black-text');
+  color: getColor('tertiary-text');
 
   @include tablet {
   }
