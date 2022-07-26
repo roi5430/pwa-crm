@@ -151,6 +151,7 @@
   background-color: getColor('font-section-color');
   @include free-width(767px) {
     padding-bottom: 40px;
+    padding-top: 60px;
   }
   @media screen and (min-width: 768px) {
     padding-top: 60px;
