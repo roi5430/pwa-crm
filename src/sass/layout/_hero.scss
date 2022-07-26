@@ -166,9 +166,9 @@
     align-items: flex-end;
     margin-right: 8px;
   }
-  @include tablet {
-    margin-right: 15px;
-  }
+  // @include tablet {
+  //   margin-right: 15px;
+  // }
 }
 
 .achive__amount {
@@ -192,7 +192,7 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    right: -4px;
+    right: -8px;
     z-index: -1;
   }
   @include desktop {
