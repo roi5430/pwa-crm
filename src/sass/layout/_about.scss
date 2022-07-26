@@ -31,7 +31,7 @@
 //     width: 1200px;
 //   }
 // }
-.container_about {
+.container {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 768px;
     padding-left: 32px;
@@ -49,8 +49,8 @@
   justify-content: center;
   background-image: url(../images/about/milk.png);
   background-repeat: no-repeat;
-
-  background-position: 50% 70%;
+  background-size: 100% auto;
+  background-position: 50% 76%;
 
   @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
@@ -71,7 +71,7 @@
 }
 
 .about__item {
-  width: 280px;
+  width: 100%;
   @media screen and (min-width: 768px) {
     width: 100%;
     margin-left: 32px;
@@ -98,14 +98,12 @@
 }
 
 .about__text {
-  width: 220px;
-
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 19px;
-
+  padding-right: 80px;
   color: getColor('tertiary-text');
 
   margin-bottom: 20px;
