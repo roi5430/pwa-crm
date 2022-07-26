@@ -300,15 +300,15 @@
     bottom: -84px;
   }
 }
-
 .girl {
   display: none;
-  z-index: 99;
+
   @include tablet {
     display: block;
     position: absolute;
     right: 32px;
     bottom: -56px;
+    z-index: 99;
   }
   @include desktop {
     right: 16px;
