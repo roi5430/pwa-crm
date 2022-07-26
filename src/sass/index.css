@@ -1202,11 +1202,6 @@ p {
     margin: 0;
   }
 }
-@media screen and (max-width: 1199px) {
-  .advantages__list {
-    padding-right: 177px;
-  }
-}
 
 @media screen and (max-width: 767px) {
   .advantages__item {
@@ -1221,7 +1216,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .advantages__item:not(:last-child) {
-    margin-right: 25px;
+    margin-right: 5px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1278,12 +1273,14 @@ p {
 }
 @media screen and (min-width: 768px) {
   .advantages__text {
+    width: 180px;
     font-size: 14px;
     line-height: 1.74;
   }
 }
 @media screen and (min-width: 1200px) {
   .advantages__text {
+    width: 288px;
     font-size: 16px;
     line-height: 1.76;
     letter-spacing: 0.02em;
@@ -1426,20 +1423,6 @@ p {
 .reviews__comment-general-wrapper {
   margin-bottom: 16px;
 }
-.reviews__comment-general-wrapper::after {
-  text-indent: 10px;
-  content: "...";
-  display: inline-block;
-  font-size: 40px;
-  color: #c7133e;
-  letter-spacing: 10px;
-  line-height: 16px;
-}
-@media screen and (min-width: 768px) {
-  .reviews__comment-general-wrapper::after {
-    line-height: 40px;
-  }
-}
 
 .reviews__comment-wrapper {
   position: relative;
@@ -1493,7 +1476,8 @@ p {
   .reviews__comment-wrapper--for-quote {
     padding-left: 45px;
     padding-right: 50px;
-    background: repeating-linear-gradient(to bottom, transparent, transparent 29px, transparent 29px, #e1e1e1 31px);
+    padding-bottom: 44px;
+    background-image: linear-gradient(to top, #fafafa, #fafafa 34px, transparent 34px, transparent), repeating-linear-gradient(to bottom, transparent, transparent 29px, transparent 29px, #e1e1e1 31px);
   }
 }
 .reviews__comment-wrapper--for-quote::before {
@@ -1539,6 +1523,25 @@ p {
   font-size: 14px;
   line-height: 1.86;
 }
+.reviews__user-data::before {
+  content: "";
+  display: block;
+  margin-top: 16px;
+  margin-right: auto;
+  margin-bottom: 16px;
+  margin-left: auto;
+  width: 32px;
+  height: 4px;
+  background-image: url(../images/clients-review/ellipse.svg), url(../images/clients-review/ellipse.svg), url(../images/clients-review/ellipse.svg);
+  background-size: 4px, 4px, 4px;
+  background-position: top 0px left 0px, top 0px left 14px, top 0px left 28px;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .reviews__user-data::before {
+    margin-top: 4px;
+  }
+}
 
 .splide__pagination {
   position: relative;
@@ -1566,20 +1569,6 @@ p {
 .splide__pagination__page {
   width: 12px;
   height: 12px;
-}
-
-.is-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .footer {
