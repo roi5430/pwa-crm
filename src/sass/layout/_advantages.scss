@@ -30,10 +30,6 @@
     justify-content: flex-start;
     margin: 0;
   }
-
-  @include free-width(1199px) {
-    padding-right: 177px;
-  }
 }
 
 // .advantages__item
@@ -50,7 +46,7 @@
   }
 
   @include tablet {
-    margin-right: 25px;
+    margin-right: 5px;
   }
 
   @include desktop {
@@ -111,14 +107,14 @@
 
   color: getColor('black-text');
 
-  // второй плейсхолдер не подходит
-
   @include tablet {
+    width: 180px;
     font-size: 14px;
     line-height: 1.74;
   }
 
   @include desktop {
+    width: 288px;
     font-size: 16px;
     line-height: 1.76;
     letter-spacing: 0.02em;
