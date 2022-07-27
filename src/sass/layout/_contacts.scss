@@ -12,6 +12,13 @@
     }
 }
 
+.contacts__container{
+    @include tablet{
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
 .contacts__list{
     list-style: none;
     font-style: normal;
