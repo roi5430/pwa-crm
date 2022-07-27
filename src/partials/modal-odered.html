@@ -2,72 +2,74 @@
 <div class="backdrop" data-modal>
   <div class="backdrop__modal">
     <!-- Кнопка закрытия -->
-    <button class="backdrop__button-close" data-modal-close>
-      <svg width="11" height="11" class="backdrop__button-close-icon">
-        <use href="./images/icons.svg#icon-mob-menu-close-btn" class="backdrop__icon-item" width="11" height="11"></use>
+    <button class="backdrop__button-close" type="button" data-modal-close>
+      <svg class="modal__close-btn-icon" width="11" height="11">
+        <use href="./images/icons.svg#icon-mob-menu-close-btn"></use>
       </svg>
     </button>
     <div class="tumb-modal">
       <!-- Звголовок формы -->
       <h2 class="tumb-modal__titel">
-        Leave your details, we will call you backLeave your details, we will
-        call you back
+        Leave your details, we will call you back
       </h2>
 
-      <!-- ФОРМА  -->
-      <!-- Данные заказчика -->
-      <!-- <form class="form" autocomplete="off">
-            <div class="form__block-user-data">
-              <label class="form__label">
-                <span class="form__name">Имя</span>
-                <input type="text" name="name" class="form__input" />
-                <svg width="18" height="18" class="form__icon">
-                  <use href="./images/symbol-defs.svg#person-field"></use>
-                </svg>
-              </label>
+      ФОРМА Данные заказчика
+      <form class="form" autocomplete="off">
+        <div class="form__block-user-data">
+          <label class="form__label">
+            <span class="form__name">Имя</span>
+            <input type="text" name="name" class="form__input" />
+            <svg width="18" height="18" class="form__icon">
+              <!-- <use href="./images/symbol-defs.svg#person-field"></use> -->
+            </svg>
+          </label>
 
-              <label class="form__label">
-                <span class="form__name">Телефон</span>
-                <input type="tel" name="tel" class="form__input" />
-                <svg width="18" height="18" class="form__icon">
-                  <use href="./images/symbol-defs.svg#phone-field"></use>
-                </svg>
-              </label>
+          <label class="form__label">
+            <span class="form__name">Телефон</span>
+            <input type="tel" name="tel" class="form__input" />
+            <svg width="18" height="18" class="form__icon">
+              <!-- <use href="./images/symbol-defs.svg#phone-field"></use> -->
+            </svg>
+          </label>
 
-              <label class="form__label">
-                <span class="form__name">Почта</span>
-                <input type="email" name="email" class="form__input" />
-                <svg width="18" height="18" class="form__icon">
-                  <use href="./images/symbol-defs.svg#email-field"></use>
-                </svg>
-              </label>
+          <label class="form__label">
+            <span class="form__name">Почта</span>
+            <input type="email" name="email" class="form__input" />
+            <svg width="18" height="18" class="form__icon">
+              <!-- <use href="./images/symbol-defs.svg#email-field"></use> -->
+            </svg>
+          </label>
 
-              <label class="form__label">
-                <span class="form__name">Комментарий</span>
-                <textarea class="form__comment" rows="5" placeholder="Введите текст"></textarea>
-              </label>
-            </div> -->
+          <label class="form__label">
+            <span class="form__name">Комментарий</span>
+            <textarea
+              class="form__comment"
+              rows="5"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+        </div>
 
-      <!-- Соглашенние с рассылкой. ЧЕКБОКС -->
-      <!-- <div class="form__agreemenr">
-              <label class="form__check-label">
-                <input
-                  type="checkbox"
-                  name="agreement"
-                  class="form__check-modal form__check-modal--checked"
-                />
-                <span class="form__check-icon"></span>
-                Соглашаюсь с рассылкой и принимаю
+        Соглашенние с рассылкой. ЧЕКБОКС
+        <div class="form__agreemenr">
+          <label class="form__check-label">
+            <input
+              type="checkbox"
+              name="agreement"
+              class="form__check-modal form__check-modal--checked"
+            />
+            <span class="form__check-icon"></span>
+            Соглашаюсь с рассылкой и принимаю
 
-                <a href="" class="form__modal-treaty">Условия договора</a>
-              </label>
-            </div> -->
+            <a href="" class="form__modal-treaty">Условия договора</a>
+          </label>
+        </div>
 
-      <!-- Кнопка отправки -->
-      <!-- <div class="form__box-modal-send">
-              <button type="submit" class="form__modal-send">Отправить</button>
-            </div>
-          </form> -->
+        Кнопка отправки
+        <div class="form__box-modal-send">
+          <button type="submit" class="form__modal-send">Отправить</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

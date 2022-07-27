@@ -15,10 +15,11 @@
 
   @include transitions(opacity, pointer-events, visibility);
 
-  &.is-hidden {
+  &.is-open {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
+    z-index: 9999;
   }
 
   @media screen and (max-wodth: 767px) {
@@ -56,4 +57,22 @@
       width: 528px;
     }
   }
+}
+
+.no-scroll {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.backdrop__modal {
+  background-color: #fff5f6;
+}
+
+.modal__close-btn-icon {
+  fill: getColor('button-color');
+}
+
+.tumb-modal__titel {
+  color: getColor('primary-text');
+  font-family: $fontPrimery;
 }
