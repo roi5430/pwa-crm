@@ -25,7 +25,6 @@
     @include tablet {
         font-size: 14px;
         display: flex;
-        width: calc((100% - 32px) / 3);
         gap: 32px;
     }  
 
@@ -40,9 +39,11 @@
     border-radius: 24px;
     padding: 40px 32px;
     margin-bottom: 20px;
+    width: 100%;
 
    @include tablet{
     margin-bottom: 60px;
+    width: calc((100% - 64px) / 3);
    }
     
 }
@@ -52,23 +53,31 @@
 .contacts__title{
     color: getColor('white-color');
     letter-spacing: 0.04em;
+    font-weight: 500;
+    font-size: 12px;
     margin-bottom: 20px;
-    text-align: center;
-    background: #F0D1A5;
+    background-color: getColor('secondary-color');
     border-radius: 4px;
     width: 80px;
     height: 16px;
     @include flexCenter;
    
     @include tablet{
+        margin-bottom: 32px;
+        font-size: 16px;
         height: 28px;
         border-radius: 6px;
+        width: 73px;
     }
 }
  
 .contacts__title--color {
     background-color: getColor('tertiary-color');
     width: 130px;
+
+    @include tablet{
+        width: 138px;
+    }
 }
 
 .contacts__line{
@@ -76,11 +85,8 @@
     margin-bottom: 24px;
     padding-bottom: 24px;
 
+
     @include tablet{
-
-    }
-
-    @include desktop{
         margin-bottom: 32px;
         padding-bottom: 32px;
     }
@@ -99,7 +105,17 @@
 }
 
 .contacts__work-time{
-  color: getColor('quaternary-color');   
+    font-size: 12px;
+    color: getColor('quaternary-color');  
+
+    @include tablet {
+        font-size: 14px;
+        letter-spacing: 0.025em;
+    }
+
+    @include desktop{
+    letter-spacing: 0.04em;
+    }
 }
 .contacts__work-time--margin{ 
     margin-bottom: 8px;
