@@ -27,21 +27,19 @@ const splide = new Splide('.splide', {
     closeMenuBtn: document.querySelector('.mob-menu__close-btn'),
     openModalBtn: document.querySelector('.buy-now-button'),
     closeModalBtn: document.querySelector('.backdrop__button-close'),
-    productCardBtnOpen: document.querySelector('.products__btn'),
-    productCardBtnClose: document.querySelector('.products__btn-close'),
-    productCarDescriptEL: document.querySelector('.products-info-modal'),
-    productCarDefaultEL: document.querySelector('.products__item'),
     menu: document.querySelector('.backdrop-mb-menu'),
     body: document.querySelector('body'),
     backdrop: document.querySelector('.backdrop'),
+    cardBtn: document.querySelector('.products__btn-common'),
+    frontEl: document.querySelector('.front'),
+    backEl: document.querySelector('.back'),
   };
 
   refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
   refs.openModalBtn.addEventListener('click', addClassModal);
   refs.closeModalBtn.addEventListener('click', removeClassModal);
-  refs.productCardBtnOpen.addEventListener('click', removeProdCart);
-  refs.productCardBtnClose.addEventListener('click', addProdCart);
+  refs.cardBtn.addEventListener('click', toggleCardClass);
 
   function toggleMenu() {
     refs.menu.classList.toggle('is-hidden');
@@ -58,13 +56,8 @@ const splide = new Splide('.splide', {
     refs.body.classList.remove('no-scroll');
   }
 
-  function addProdCart() {
-    refs.productCarDescriptEL.classList.add('is-info-hidden');
-    refs.productCarDefaultEL.classList.remove('is-info-hidden');
-  }
-
-  function removeProdCart() {
-    refs.productCarDescriptEL.classList.remove('is-info-hidden');
-    refs.productCarDefaultEL.classList.add('is-info-hidden');
+  function toggleCardClass() {
+    refs.frontEl.classList.toggle('is-passive');
+    refs.backEl.classList.toggle('is-active');
   }
 })();

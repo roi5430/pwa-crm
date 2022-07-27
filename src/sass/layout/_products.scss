@@ -60,7 +60,7 @@
 }
 
 .products__item:nth-child(1) {
-  background: getColor('primary-color');
+  // background: getColor('primary-color');
   @media screen and (max-width: 767px) {
     margin-bottom: 140px;
   }
@@ -292,6 +292,49 @@
 
 /*-----------------Products info modal---------------------*/
 
+/*кнопка*/
+.products__btn-common {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/*кнопка*/
+/*спільний контейнер*/
+.products__wrap {
+  position: relative;
+  perspective: 4000px;
+}
+/*спільний контейнер*/
+
+/*змінні контейнери*/
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 133px;
+  padding-left: 61px;
+  padding-right: 62px;
+  backface-visibility: hidden;
+  transition: transform 2000ms;
+  background: getColor('primary-color');
+  border-radius: 24px;
+  height: 535px;
+}
+.front.is-passive {
+  transform: rotateY(180deg);
+}
+.back {
+  transform: rotateY(180deg);
+}
+
+.back.is-active {
+  transform: rotateY(360deg);
+}
+/*змінні контейнери*/
+
 /*.products-info-modal {
   position: absolute;
   top: 0px;
@@ -325,29 +368,29 @@
 
 // це мають бути стилі для прихованої частини карти і вони спочатку visibility: hidden
 // при цьому розвернуті, так, ніби анімація розвороту вже зроблена
-.products-info-modal.is-info-hidden {
-  visibility: hidden;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background: #fff5f6;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 24px;
+// .products-info-modal.is-info-hidden {
+//   visibility: hidden;
+//   position: absolute;
+//   top: 0px;
+//   left: 0px;
+//   background: #fff5f6;
+//   background-size: cover;
+//   width: 100%;
+//   height: 100%;
+//   border-radius: 24px;
 
-  padding: 160px 40px 100px;
+//   padding: 160px 40px 100px;
 
-  @include tablet {
-    padding: 100px 30px 100px;
-  }
-  @include desktop {
-    padding: 160px 45px 100px;
-  }
+//   @include tablet {
+//     padding: 100px 30px 100px;
+//   }
+//   @include desktop {
+//     padding: 160px 45px 100px;
+//   }
 
-  transition: animation 500ms cubic-bezier(0.4, 0, 0.2, 1);
+//   transition: animation 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* animation: rotateY 1000ms 1 backwards ease-in-out 100ms;
+/* animation: rotateY 1000ms 1 backwards ease-in-out 100ms;
   @keyframes rotateY {
     0% {
       transform: perspective(500px) rotateY(0deg);
@@ -357,31 +400,31 @@
       transform: perspective(500px) rotateY(180deg);
     }
   }*/
-}
+// }
 
 // це та ж частина, але вже не прихована і ми її бачимо
-.products-info-modal {
-  visibility: visible;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background: #fff5f6;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 24px;
+// .products-info-modal {
+//   visibility: visible;
+//   position: absolute;
+//   top: 0px;
+//   left: 0px;
+//   background: #fff5f6;
+//   background-size: cover;
+//   width: 100%;
+//   height: 100%;
+//   border-radius: 24px;
 
-  padding: 160px 40px 100px;
-  @include tablet {
-    padding: 100px 30px 100px;
-  }
-  @include desktop {
-    padding: 160px 45px 100px;
-  }
+//   padding: 160px 40px 100px;
+//   @include tablet {
+//     padding: 100px 30px 100px;
+//   }
+//   @include desktop {
+//     padding: 160px 45px 100px;
+//   }
 
-  transition: animation 500ms cubic-bezier(0.4, 0, 0.2, 1);
+//   transition: animation 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  /*animation: rotateY 1000ms 1 normal ease-in-out 100ms;
+/*animation: rotateY 1000ms 1 normal ease-in-out 100ms;
   @keyframes rotateY {
     0% {
       transform: perspective(500px) rotateY(0deg);
@@ -391,22 +434,22 @@
       transform: perspective(500px) rotateY(180deg);
     }
   }*/
-}
+// }
 // для фронтальної частини в тебе значення за замовч. є, тобто ми її бачимо,
 //тобі лишається тут зробити анімацію для фронтальної сторони і  visibility: hidden
-.products__item.is-info-hidden {
-  visibility: hidden;
-  animation: rotateY 1000ms 1 backwards ease-in-out 100ms;
-  @keyframes rotateY {
-    0% {
-      transform: perspective(500px) rotateY(0deg);
-    }
+// .products__item.is-info-hidden {
+//   visibility: hidden;
+//   animation: rotateY 1000ms 1 backwards ease-in-out 100ms;
+//   @keyframes rotateY {
+//     0% {
+//       transform: perspective(500px) rotateY(0deg);
+//     }
 
-    100% {
-      transform: perspective(500px) rotateY(180deg);
-    }
-  }
-}
+//     100% {
+//       transform: perspective(500px) rotateY(180deg);
+//     }
+//   }
+// }
 
 .products__item::before {
   visibility: visible;
