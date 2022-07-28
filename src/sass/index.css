@@ -42,7 +42,7 @@ p {
   margin-bottom: 0;
 }
 
-.footer__title-second, .advantages__title, .about__title .about__span-title--secondary, .about__title, .products__title {
+.footer__title-second, .advantages__title, .about__title, .products__title {
   font-family: "Titan One", cursive;
   font-style: normal;
   font-weight: 400;
@@ -54,20 +54,20 @@ p {
   color: #d41443;
 }
 @media screen and (min-width: 768px) {
-  .footer__title-second, .advantages__title, .about__title .about__span-title--secondary, .about__title, .products__title {
+  .footer__title-second, .advantages__title, .about__title, .products__title {
     font-size: 48px;
     line-height: 1.14;
     letter-spacing: 0.06em;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer__title-second, .advantages__title, .about__title .about__span-title--secondary, .about__title, .products__title {
+  .footer__title-second, .advantages__title, .about__title, .products__title {
     font-size: 58px;
     line-height: 1.13;
   }
 }
 
-.footer__title, .about__title .about__span-title, .products__sub-title {
+.footer__title, .about__span-title, .products__sub-title {
   font-family: "Titan One", cursive;
   font-style: normal;
   font-weight: 400;
@@ -1053,7 +1053,14 @@ p {
 }
 
 .about__title {
+  display: block;
+  margin-top: 15px;
   margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .about__title {
+    margin-top: 16px;
+  }
 }
 @media screen and (min-width: 768px) {
   .about__title {
@@ -1065,14 +1072,10 @@ p {
     margin-bottom: 60px;
   }
 }
-.about__title .about__span-title--secondary {
+
+.about__span-title {
+  text-align: center;
   display: block;
-  margin-top: 15px;
-}
-@media screen and (min-width: 768px) {
-  .about__title .about__span-title--secondary {
-    margin-top: 16px;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1102,18 +1105,6 @@ p {
   .about__list {
     flex-wrap: nowrap;
     background-image: none;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .about__list {
-    background-image: url(../images/about/milk-desktop.png);
-    background-repeat: no-repeat;
-    background-position: top;
-  }
-}
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .about__list {
-    background-image: url(../images/about/milk-desk-1x.png);
   }
 }
 
@@ -1212,6 +1203,19 @@ p {
   .about-section {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-section {
+    background-image: url(../images/about/milk-desktop.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .about-section {
+    background-image: url(../images/about/milk-desk-1x.png);
   }
 }
 
