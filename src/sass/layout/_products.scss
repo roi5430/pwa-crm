@@ -269,7 +269,9 @@
 /*-----------------Products info modal---------------------*/
 
 /*кнопка*/
-.products__btn-common {
+.products__btn-common1,
+.products__btn-common2,
+.products__btn-common3 {
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -283,8 +285,12 @@
 /*спільний контейнер*/
 
 /*змінні контейнери*/
-.front,
-.back {
+.front1,
+.back1,
+.front2,
+.back2,
+.front3,
+.back3 {
   //position: relative;
   top: 0;
   left: 0;
@@ -294,7 +300,9 @@
   border-radius: 24px;
 }
 
-.front {
+.front1,
+.front2,
+.front3 {
   position: relative;
   background: getColor('primary-color');
 
@@ -318,10 +326,14 @@
   }
 }
 
-.front.is-passive {
+.front1.is-passive,
+.front2.is-passive,
+.front3.is-passive {
   transform: rotateY(180deg);
 }
-.back {
+.back1,
+.back2,
+.back3 {
   position: absolute;
   background: #fff5f6;
   height: 100%;
@@ -337,7 +349,9 @@
   transform: rotateY(180deg);
 }
 
-.back.is-active {
+.back1.is-active,
+.back2.is-active,
+.back3.is-active {
   transform: rotateY(360deg);
 }
 
