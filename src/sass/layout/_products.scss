@@ -22,9 +22,12 @@
 }
 
 .products__list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: block;
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .products__item {
@@ -32,6 +35,10 @@
   text-align: center;
   flex-grow: 1;
   border-radius: 24px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 140px;
+  }
 
   @include tablet {
     width: calc((100% - 32px) / 3);
@@ -42,45 +49,29 @@
     margin-right: 32px;
   }
   transition: animation 500ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  /*animation: rotateY 1000ms 1 alternate ease-in-out 100ms;
-  @keyframes rotateY {
-    0% {
-      transform: perspective(500px) rotateY(180deg);
-    }
-
-    100% {
-      transform: perspective(500px) rotateY(0deg);
-    }
-  }*/
 }
 
 .products__item:nth-child(3n) {
   margin-right: 0px;
+  margin-bottom: 0px;
 }
 
-.products__item:nth-child(1) {
-  // background: getColor('primary-color');
-  @media screen and (max-width: 767px) {
-    margin-bottom: 140px;
-  }
+.products__item:nth-child(1) .front {
+  background: getColor('primary-color');
 }
 
-.products__item:nth-child(2) {
+.products__item:nth-child(2) .front {
   background: getColor('secondary-color');
-  @media screen and (max-width: 767px) {
-    margin-bottom: 140px;
-  }
 }
 
-.products__item:nth-child(3) {
+.products__item:nth-child(3) .front {
   background: getColor('tertiary-color');
 }
 
 .products__item:nth-child(1)::before {
   content: '';
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   display: block;
   width: 100%;
   min-height: 280px;
@@ -117,6 +108,7 @@
 .products__item:nth-child(2)::before {
   content: '';
   position: absolute;
+  z-index: 1;
   display: block;
   width: 100%;
   min-height: 280px;
@@ -153,6 +145,7 @@
 .products__item:nth-child(3)::before {
   content: '';
   position: absolute;
+  z-index: 1;
   display: block;
   width: 100%;
   min-height: 280px;
@@ -190,24 +183,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  /*max-width: 200px;
-  margin: 0 auto;*/
-  height: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 140px;
-
-  @include tablet {
-    padding-top: 86px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  @include desktop {
-    padding-top: 133px;
-    padding-left: 61px;
-    padding-right: 61px;
-  }
+  perspective: 4000px;
 }
 
 .products__item-title {
@@ -262,10 +238,10 @@
 
   @include tablet {
     line-height: 1.75;
-    margin-bottom: auto;
+    margin-bottom: 32px;
   }
   @include desktop {
-    margin-bottom: auto;
+    margin-bottom: 60px;
   }
 }
 
@@ -303,36 +279,84 @@
 /*кнопка*/
 /*спільний контейнер*/
 .products__wrap {
-  position: relative;
-  perspective: 4000px;
 }
 /*спільний контейнер*/
 
 /*змінні контейнери*/
 .front,
 .back {
-  position: absolute;
+  //position: relative;
   top: 0;
   left: 0;
-  padding-top: 133px;
-  padding-left: 61px;
-  padding-right: 62px;
+
   backface-visibility: hidden;
   transition: transform 2000ms;
-  background: getColor('primary-color');
   border-radius: 24px;
-  height: 535px;
 }
+
+.front {
+  position: relative;
+  background: getColor('primary-color');
+
+  height: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 140px;
+  padding-bottom: 80px;
+
+  @include tablet {
+    padding-top: 86px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include desktop {
+    padding-top: 133px;
+    padding-left: 61px;
+    padding-right: 62px;
+    padding-bottom: 100px;
+  }
+}
+
 .front.is-passive {
   transform: rotateY(180deg);
 }
 .back {
+  position: absolute;
+  background: #fff5f6;
+  height: 100%;
+  padding: 160px 40px 100px;
+
+  @include tablet {
+    padding: 100px 30px 100px;
+  }
+  @include desktop {
+    padding: 160px 45px 100px;
+  }
+
   transform: rotateY(180deg);
 }
 
 .back.is-active {
   transform: rotateY(360deg);
 }
+
+.products-info__text {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: getColor('tertiary-text');
+
+  @include tablet {
+  }
+  @include desktop {
+    font-size: 14px;
+  }
+}
+
 /*змінні контейнери*/
 
 /*.products-info-modal {
@@ -451,30 +475,7 @@
 //   }
 // }
 
-.products__item::before {
-  visibility: visible;
-  animation: rotateY;
-  @keyframes none {
-  }
-}
-
-.products-info__text {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
-
-  color: getColor('tertiary-text');
-
-  @include tablet {
-  }
-  @include desktop {
-    font-size: 14px;
-  }
-}
-
-.products__btn-close {
+/*.products__btn-close {
   position: absolute;
   z-index: 2;
   bottom: 40px;
@@ -484,7 +485,7 @@
   border: none;
   border-radius: 50%;
   padding: 0;
-  /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);*/
+
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     cursor: pointer;
@@ -493,10 +494,10 @@
   @include desktop {
     bottom: 60px;
   }
-}
+}*/
 
-.is-hidden {
+/*.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
+}*/
