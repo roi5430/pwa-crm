@@ -26,6 +26,7 @@ const splide = new Splide('.splide', {
     openMenuBtn: document.querySelector('.nav__mob-btn'),
     closeMenuBtn: document.querySelector('.mob-menu__close-btn'),
     openModalBtn: document.querySelector('.buy-now-button'),
+    openModalBtnNMenu: document.querySelector('.buy-now-button-menu'),
     closeModalBtn: document.querySelector('.backdrop__button-close'),
     menu: document.querySelector('.backdrop-mb-menu'),
     body: document.querySelector('body'),
@@ -38,6 +39,7 @@ const splide = new Splide('.splide', {
   refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
   refs.openModalBtn.addEventListener('click', addClassModal);
+  refs.openModalBtnNMenu.addEventListener('click', addClassModal);
   refs.closeModalBtn.addEventListener('click', removeClassModal);
   refs.cardBtn.addEventListener('click', toggleCardClass);
 
