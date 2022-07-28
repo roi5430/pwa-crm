@@ -1209,7 +1209,7 @@ p {
   .about-section {
     background-image: url(../images/about/milk-desktop.png);
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: 50% 100%;
     background-size: 100% auto;
   }
 }
