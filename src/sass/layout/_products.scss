@@ -56,15 +56,15 @@
   margin-bottom: 0px;
 }
 
-.products__item:nth-child(1) .front {
+.products__item:nth-child(1) .front1 {
   background: getColor('primary-color');
 }
 
-.products__item:nth-child(2) .front {
+.products__item:nth-child(2) .front2 {
   background: getColor('secondary-color');
 }
 
-.products__item:nth-child(3) .front {
+.products__item:nth-child(3) .front3 {
   background: getColor('tertiary-color');
 }
 
@@ -304,7 +304,6 @@
 .front2,
 .front3 {
   position: relative;
-  background: getColor('primary-color');
 
   height: 100%;
   padding-left: 40px;
