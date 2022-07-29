@@ -3,8 +3,8 @@
   <div class="backdrop__modal">
     <!-- Кнопка закрытия -->
     <button class="backdrop__button-close" type="button" data-modal-close>
-      <svg class="modal__close-btn-icon" width="11" height="11">
-        <use href="./images/icons.svg#icon-mob-menu-close-btn"></use>
+      <svg class="modal__close-btn-icon" width="25px" height="25px">
+        <use href="./images/icons.svg#icon-close_for_btn"></use>
       </svg>
     </button>
     <div class="tumb-modal">
@@ -16,17 +16,17 @@
       <form class="form" autocomplete="off">
         <div class="form__block-user-data">
           <div class="form__fild">
-            <input type="text" name="name" class="form__input" />
+            <input type="text" name="name" class="form__input" placeholder=" "/>
             <label class="form__label" name="name">Name</label>
           </div>
 
           <div class="form__fild">
-            <input type="tel" name="tel" class="form__input" />
+            <input type="tel" name="tel" class="form__input" placeholder=" "/>
             <label class="form__label" name="tel">Phone</label>
           </div>
 
           <div class="form__fild">
-            <input type="email" name="email" class="form__input" />
+            <input type="email" name="email" class="form__input" placeholder=" "/>
             <label class="form__label" name="email">E-mail</label>
           </div>
 
@@ -34,29 +34,33 @@
             <textarea
               class="form__comment"
               rows="5"
-              placeholder="Введите текст"
+              placeholder="Lieve your comment here"
             ></textarea>
             <label class="form__label"></label>
           </div>
 
-        Соглашенние с рассылкой. ЧЕКБОКС
-        <div class="form__agreemenr">
+        <div class="form__agreement">
           <label class="form__check-label">
             <input
               type="checkbox"
               name="agreement"
-              class="form__check-modal form__check-modal--checked"
+              class="form__check-modal form__check-input"
             />
-            <span class="form__check-icon"></span>
-            Соглашаюсь с рассылкой и принимаю
 
-            <a href="" class="form__modal-treaty">Условия договора</a>
+            <div class="form__check-border"></div>
+              <svg class="form__checked" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-icon-check"></use>
+            </svg>
+
+            <div class="form__acception">I consent to the processing of personal data and accept
+              <a href="" class="form__modal-treaty">Contract terms</a>
+            </div>
+            
           </label>
         </div>
 
-        Кнопка отправки
         <div class="form__box-modal-send">
-          <button type="submit" class="form__modal-send">Отправить</button>
+          <button type="submit" class="form__modal-send">Send</button>
         </div>
       </form>
     </div>
