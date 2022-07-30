@@ -121,14 +121,20 @@
   border: none;
   border-radius: 3px;
   box-shadow: inset 1px 1px 8px 1px #eeb6c3, 1px 1px 2px 1px #eeb6c3;
+
   &:focus {
     border: none;
     outline: 1px solid #855f68;
   }
-  &:focus + .form__label,
-  &:not(:placeholder-shown) + .form__label {
-    transform: translate(-10px, -30px);
+
+  &::placeholder {
+    color: transparent;
   }
+}
+
+.form__input:not(:placeholder-shown) + .form__label,
+.form__input:focus + .form__label {
+  transform: translate(-10px, -30px);
 }
 
 .form__comment {
