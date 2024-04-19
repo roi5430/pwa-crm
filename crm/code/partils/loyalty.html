@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link rel="stylesheet" href="../../style/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__sidebar">
+        <h1 class="header__sidebar-title">Admin Dashboard</h1>
+        <ul class="header__sidebar-menu">
+          <li>
+            <a href="../../index.html" class="sidebar_btn">Головна</a>
+          </li>
+
+          <li>
+            <a href="./clients.html" class="sidebar_btn">Клієнти</a>
+          </li>
+          <li>
+            <a href="./sales.html" class="sidebar_btn">Продажі</a>
+          </li>
+          <li>
+            <a href="./costs.html" class="sidebar_btn">Витрати</a>
+          </li>
+          <li>
+            <a href="loyalty.html" class="sidebar_btn">Лояльність</a>
+          </li>
+          <li>
+            <a href="./bots.html" class="sidebar_btn">Боти</a>
+          </li>
+          <li>
+            <a href="./warehouses.html" class="sidebar_btn">Склади</a>
+          </li>
+          <li>
+            <a href="./sippliers.html" class="sidebar_btn">Постачальники</a>
+          </li>
+          <li>
+            <a href="./calendar.html" class="sidebar_btn">Календар</a>
+          </li>
+          <li>
+            <a href="./tasks.html" class="sidebar_btn">Задачі</a>
+          </li>
+          <li>
+            <a href="./employees.html" class="sidebar_btn">Співробітники</a>
+          </li>
+          <li>
+            <a href="./services.html" class="sidebar_btn">Послуги</a>
+          </li>
+          <li>
+            <a href="./marketing.html" class="sidebar_btn">Маркетинг</a>
+          </li>
+          <li>
+            <a href="./message.html" class="sidebar_btn">Повідомлення</a>
+          </li>
+          <li>
+            <a href="./statistics.html" class="sidebar_btn">Статистика</a>
+          </li>
+          <li>
+            <a href="./settings.html" class="sidebar_btn">Налаштування</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="user">
+      <button class="user__btn">Дмитро</button>
+    </div>
+    <span class="span"></span>
+    <section class="container">
+      <div class="tabs">
+        <nav class="tabs__links">
+          <a href="#sms" class="tabs__link">Автоматичні розсилки</a>
+          <a href="#filter" class="tabs__link">Вибірка за фільтром </a>
+          <a href="#client" class="tabs__link">Вибір окремого клієнта </a>
+        </nav>
+      </div>
+      <div class="tabs__body">
+        <div id="sms" class="tab__content">
+         <button class="btn">День народження</button>
+         <button class="btn">Новий рік</button>
+         <button class="btn">Постійний клієнт</button>
+          <button class="btn">Створити</button>
+        </div>
+        <div id="filter" class="tab__content">
+          <form id="filterForm">
+    <label for="age">Вік:</label>
+    <input type="number" id="age" name="age" min="0"><br><br>
+    
+    <label for="gender">Стать:</label>
+    <select id="gender" name="gender">
+        <option value="">Оберіть стать</option>
+        <option value="male">Чоловіча</option>
+        <option value="female">Жіноча</option>
+        <option value="other">Інша</option>
+    </select><br><br>
+    
+    <label for="category">Категорія клієнта:</label>
+    <select id="category" name="category">
+        <option value="">Оберіть категорію</option>
+        <option value="vip">VIP</option>
+        <option value="regular">Звичайний</option>
+        <option value="new">Новий</option>
+    </select><br><br>
+    
+    <button class="btn" type="button" >Застосувати фільтр</button>
+    <button class="btn" type="button" >Скинути фільтр</button>
+</form>
+
+        </div>
+           <div class="tabs__body">
+        <div id="client" class="tab__content">
+          <button class="btn" type="button" >Нарахувати бонуси</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

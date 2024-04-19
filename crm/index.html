@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
+  <body>
+   
+    <header class="header">
+      <nav class="header__sidebar">
+        <h1 class="header__sidebar-title">Admin Dashboard </h1>
+        <ul class="header__sidebar-menu">
+          <li>
+            <a href="#" class="sidebar_btn">Головна</a>
+          </li>
+
+          <li>
+            <a href="./code/partils/clients.html" class="sidebar_btn"
+              >Клієнти</a
+            >
+          </li>
+          <li>
+            <a href="./code/partils/sales.html" class="sidebar_btn">Продажі</a>
+          </li>
+          <li>
+            <a href="./code/partils/costs.html" class="sidebar_btn">Витрати</a>
+          </li>
+          <li>
+            <a href="./code/partils/loyalty.html" class="sidebar_btn"
+              >Лояльність</a
+            >
+          </li>
+          <li>
+            <a href="./code/partils/bots.html" class="sidebar_btn">Боти</a>
+          </li>
+          <li>
+            <a href="./code/partils/warehouses.html" class="sidebar_btn"
+              >Склади</a
+            >
+          </li>
+          <li>
+            <a href="./code/partils/sippliers.html" class="sidebar_btn"
+              >Постачальники</a
+            >
+          </li>
+          <li>
+            <a href="./code/partils/calendar.html" class="sidebar_btn"
+              >Календар</a
+            >
+          </li>
+          <li>
+            <a href="./code/partils/tasks.html" class="sidebar_btn">Задачі</a>
+          </li>
+          <li>
+            <a href="./code/partils/employees.html" class="sidebar_btn"
+              >Співробітники</a
+            >
+          </li>
+          <li>
+            <a href="./code/partils/services.html" class="sidebar_btn"
+              >Послуги</a
+            >
+          </li>
+          <li>
+            <a href="./code/partils/marketing.html" class="sidebar_btn"
+              >Маркетинг</a
+            >
+          </li>
+          <li>
+            <a href="./code/partils/message.html" class="sidebar_btn"
+              >Повідомлення</a
+            >
+          </li>
+          <li>
+            <a href="./code/partils/statistics.html" class="sidebar_btn"
+              >Статистика</a
+            >
+          </li>
+          <li>
+            <a href="./code/partils/settings.html" class="sidebar_btn"
+              >Налаштування</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+		 <div class="user">
+      <button class="user__btn">Дмитро</button>
+    </div>
+	<span class="span"></span>
+      <section class="container">
+        <div class="tabs">
+          <nav class="tabs__links">
+            <a href="./code/partils/clients.html" class="tabs__link"> Новий клієнт </a>
+            <a href="./code/partils/sales.html" class="tabs__link"> Продаж </a>
+            <a href="#service" class="tabs__link"> Записати на послугу </a>
+            <a href="./code/partils/statistics.html" class="tabs__link">
+              Статистика
+            </a>
+          </nav>
+        </div>
+          <div id="service" class="tab__content">
+            <table class="table">
+              <tr>
+                <th>Ім'я та прізвище</th>
+                <td><input type="text" id="name" name="name" /></td>
+              </tr>
+              <tr>
+                <th>Номер телефону</th>
+                <td><input type="text" id="phone" name="phone" /></td>
+              </tr>
+              <tr>
+                <th>Послуга</th>
+                <td>
+                  <select id="service" name="service">
+                    <option value="">Оберіть послугу</option>
+                    <option value="service1">Послуга 1</option>
+                    <option value="service2">Послуга 2</option>
+                    <option value="service3">Послуга 3</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>Майстер</th>
+                <td><input type="text" id="master" name="master" /></td>
+              </tr>
+              <tr>
+                <th>Дата та час</th>
+                <td>
+                  <input type="datetime-local" id="datetime" name="datetime" />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><button class="table__btn">Підтвердити запис</button></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./code/index.js"></script>
+  </body>
+</html>

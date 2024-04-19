@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link rel="stylesheet" href="../../style/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__sidebar">
+        <h1 class="header__sidebar-title">Admin Dashboard</h1>
+        <ul class="header__sidebar-menu">
+          <li>
+            <a href="../../index.html" class="sidebar_btn">Головна</a>
+          </li>
+
+          <li>
+            <a href="./clients.html" class="sidebar_btn">Клієнти</a>
+          </li>
+          <li>
+            <a href="./sales.html" class="sidebar_btn">Продажі</a>
+          </li>
+          <li>
+            <a href="./costs.html" class="sidebar_btn">Витрати</a>
+          </li>
+          <li>
+            <a href="./loyalty.html" class="sidebar_btn">Лояльність</a>
+          </li>
+          <li>
+            <a href="./bots.html" class="sidebar_btn">Боти</a>
+          </li>
+          <li>
+            <a href="./warehouses.html" class="sidebar_btn">Склади</a>
+          </li>
+          <li>
+            <a href="./sippliers.html" class="sidebar_btn">Постачальники</a>
+          </li>
+          <li>
+            <a href="./calendar.html" class="sidebar_btn">Календар</a>
+          </li>
+          <li>
+            <a href="./tasks.html" class="sidebar_btn">Задачі</a>
+          </li>
+          <li>
+            <a href="./employees.html" class="sidebar_btn">Співробітники</a>
+          </li>
+          <li>
+            <a href="./services.html" class="sidebar_btn">Послуги</a>
+          </li>
+          <li>
+            <a href="./marketing.html" class="sidebar_btn">Маркетинг</a>
+          </li>
+          <li>
+            <a href="./message.html" class="sidebar_btn">Повідомлення</a>
+          </li>
+          <li>
+            <a href="statistics.html" class="sidebar_btn">Статистика</a>
+          </li>
+          <li>
+            <a href="./settings.html" class="sidebar_btn">Налаштування</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="user">
+      <button class="user__btn">Дмитро</button>
+    </div>
+    <span class="span"></span>
+    <section class="container">
+      <canvas id="myChart" width="110" height="60"></canvas>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        const analyticsData = {
+          labels: [
+            'Розсилки',
+            'Завантаженість працівників',
+            'Продажі',
+            'Нові клієнти',
+            'Неактивні клієнти',
+            'Середній чек',
+            'Дохід',
+            'P&L',
+          ],
+          datasets: [
+            {
+              label: 'Аналітика',
+              backgroundColor: 'rgb(54, 162, 235)',
+              borderColor: 'rgb(54, 162, 235)',
+              data: [100, 80, 120, 90, 70, 110, 150, 130],
+            },
+          ],
+        };
+
+        const chartOptions = {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        };
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+
+        // Створення нового графіка
+        const myChart = new Chart(ctx, {
+          type: 'bar',
+          data: analyticsData,
+          options: chartOptions,
+        });
+      </script>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link rel="stylesheet" href="../../style/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__sidebar">
+        <h1 class="header__sidebar-title">Admin Dashboard</h1>
+        <ul class="header__sidebar-menu">
+          <li>
+            <a href="../../index.html" class="sidebar_btn">Головна</a>
+          </li>
+
+          <li>
+            <a href="./clients.html" class="sidebar_btn">Клієнти</a>
+          </li>
+          <li>
+            <a href="./sales.html" class="sidebar_btn">Продажі</a>
+          </li>
+          <li>
+            <a href="costs.html" class="sidebar_btn">Витрати</a>
+          </li>
+          <li>
+            <a href="./loyalty.html" class="sidebar_btn">Лояльність</a>
+          </li>
+          <li>
+            <a href="./bots.html" class="sidebar_btn">Боти</a>
+          </li>
+          <li>
+            <a href="./warehouses.html" class="sidebar_btn">Склади</a>
+          </li>
+          <li>
+            <a href="./sippliers.html" class="sidebar_btn">Постачальники</a>
+          </li>
+          <li>
+            <a href="./calendar.html" class="sidebar_btn">Календар</a>
+          </li>
+          <li>
+            <a href="./tasks.html" class="sidebar_btn">Задачі</a>
+          </li>
+          <li>
+            <a href="./employees.html" class="sidebar_btn">Співробітники</a>
+          </li>
+          <li>
+            <a href="./services.html" class="sidebar_btn">Послуги</a>
+          </li>
+          <li>
+            <a href="./marketing.html" class="sidebar_btn">Маркетинг</a>
+          </li>
+          <li>
+            <a href="./message.html" class="sidebar_btn">Повідомлення</a>
+          </li>
+          <li>
+            <a href="./statistics.html" class="sidebar_btn">Статистика</a>
+          </li>
+          <li>
+            <a href="./settings.html" class="sidebar_btn">Налаштування</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="user">
+      <button class="user__btn">Дмитро</button>
+    </div>
+    <span class="span"></span>
+    <section class="container">
+      <div class="tabs">
+        <button style="position: fixed; right: 50px" class="btn">
+          Додати витрату
+        </button>
+        <nav class="costs__tabs-links">
+          <a href="#salary" class="tabs__link">Зарплата</a>
+          <a href="#rent" class="tabs__link">Оренда</a>
+          <a href="#inventory" class="tabs__link">Інвентар</a>
+          <a href="#goods" class="tabs__link">Товар</a>
+        </nav>
+      </div>
+
+      <table style="width: 80%; margin: 40px; border-spacing: 1px">
+        <thead>
+          <tr>
+            <th>Пункт витрати</th>
+            <th>Дата додавання</th>
+            <th>Сума</th>
+            <th>Категорія витрати</th>
+            <th>Опис</th>
+          </tr>
+        </thead>
+        <tbody id="expenses-table-body">
+          <tr>
+            <td>Зарплата</td>
+            <td>2024-04-10</td>
+            <td>2000</td>
+            <td>Зарплата</td>
+            <td>Виплата заробітної плати за квітень</td>
+          </tr>
+          <tr>
+            <td>Інвентар</td>
+            <td>2024-04-09</td>
+            <td>500</td>
+            <td>Покупка інвентарю</td>
+            <td>Покупка нового обладнання для кухні</td>
+          </tr>
+          <tr>
+            <td>Оренда</td>
+            <td>2024-04-08</td>
+            <td>800</td>
+            <td>Оренда приміщення</td>
+            <td>Оплата орендної плати за квітень</td>
+          </tr>
+          <tr>
+            <td>Товар</td>
+            <td>2024-04-07</td>
+            <td>300</td>
+            <td>Закупівля товару</td>
+            <td>Покупка нових товарів для реалізації</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
