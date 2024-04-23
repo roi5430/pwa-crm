@@ -70,7 +70,7 @@
     <span class="span"></span>
     <section class="container">
       <div class="employees__buttons-list">
-        <button id="openPopupBtn" class="btn">Додати співробітника</button>
+        <button onclick="openModal()" class="btn">Додати співробітника</button>
         <button class="btn">Звільнити співробітника</button>
         <button class="btn">Відпустка</button>
         <button class="btn">Лікарняний</button>
@@ -93,6 +93,83 @@
         </tbody>
       </table>
     </section>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Інформація про нового співробітника</h3>
+        <!-- Поля для введення даних співробітника -->
+        <input
+          type="text"
+          class="modal-input"
+          placeholder="ПІБ"
+          id="fullName"
+          required
+        /><br />
+        <input
+          type="tel"
+          class="modal-input"
+          placeholder="Номер телефону"
+          id="phoneNumber"
+          required
+        /><br />
+        <input
+          type="email"
+          class="modal-input"
+          placeholder="Емейл"
+          id="email"
+          required
+        /><br />
+        <input
+          type="text"
+          class="modal-input"
+          placeholder="Адреса проживання"
+          id="address"
+          required
+        /><br />
+        <input
+          type="text"
+          class="modal-input"
+          placeholder="Паспорт"
+          id="passport"
+          required
+        /><br />
+        <input
+          type="text"
+          class="modal-input"
+          placeholder="Договір про працю"
+          id="employmentContract"
+          required
+        /><br />
+        <!-- Випадаюче меню для посади -->
+        <select class="modal-select" id="position">
+          <option value="admin">Адміністратор</option>
+          <option value="operator">Оператор</option>
+          <option value="master">Майстер</option>
+          <option value="director">Директор</option>
+          <option value="superDirector">Супер-директор</option>
+          <option value="medicalStaff">Медперсонал</option></select
+        ><br />
+        <!-- Поля для введення зарплати -->
+        <input
+          type="text"
+          class="modal-input"
+          placeholder="Зарплата"
+          id="salary"
+          required
+        /><br />
+        <!-- Випадаюче меню для робочого графіку -->
+        <select class="modal-select" id="workSchedule">
+          <option value="free">Вільний графік</option>
+          <option value="2*2">2*2</option>
+          <option value="2*3">2*3</option>
+          <option value="mondayToFriday">Пн-Пт</option></select
+        ><br />
+        <!-- Кнопка застосування -->
+        <button class="btn" onclick="applyEmployee()">Застосувати</button>
+      </div>
+    </div>
+
     <script src="../../../moc/moc.js"></script>
     <script src="../index.js"></script>
   </body>

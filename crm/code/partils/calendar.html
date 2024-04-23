@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main</title>
     <link rel="stylesheet" href="../../style/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -69,21 +73,45 @@
     </div>
     <span class="span"></span>
     <section class="container">
-      <div class="tabs">
-        <nav class="tabs__links">
-          <a href="#search" class="tabs__link"> Пошук клієнта</a>
-          <a href="#delivery" class="tabs__link">На доставку (список) </a>
-        </nav>
-      </div>
-      <div class="tabs__body">
-        <div id="search" class="tab__content">
-          <h3>Telegram</h3>
-        </div>
-
-        <div id="delivery" class="tab__content">
-          <h3>Viber</h3>
-        </div>
-      </div>
+      <div id="calendar" style="max-width: 1000px; margin: 0 auto"></div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const calendarEl = document.getElementById('calendar');
+
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          firstDayOfWeek: 1,
+          events: [
+            {
+              title: 'Запис клієнта на послугу',
+              start: '2024-04-15T10:00:00',
+              end: '2024-04-15T12:00:00',
+              resourceId: 'a',
+            },
+            {
+              title: 'Запис клієнта на послугу',
+              start: '2024-04-18T10:00:00',
+              end: '2024-04-18T12:00:00',
+              resourceId: 'b',
+            },
+            {
+              title: 'Графік роботи персоналу',
+              start: '2024-04-15T09:00:00',
+              end: '2024-04-15T17:00:00',
+              daysOfWeek: [1, 2, 3, 4, 5],
+              display: 'background',
+            },
+          ],
+          resources: [
+            { id: 'a', title: 'Майстер 1' },
+            { id: 'b', title: 'Майстер 2' },
+          ],
+        });
+
+        calendar.render(); // Відображення календаря
+      });
+    </script>
   </body>
 </html>

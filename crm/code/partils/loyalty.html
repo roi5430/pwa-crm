@@ -86,23 +86,26 @@
         <div id="filter" class="tab__content">
           <form id="filterForm">
     <label for="age">Вік:</label>
-    <input type="number" id="age" name="age" min="0"><br><br>
+    <input  style=" padding: 12px 20px;
+  margin: 8px 0;" type="number" id="age" name="age" min="0">
     
     <label for="gender">Стать:</label>
-    <select id="gender" name="gender">
+    <select style=" padding: 12px 20px;
+  margin: 8px 0;" id="gender" name="gender">
         <option value="">Оберіть стать</option>
         <option value="male">Чоловіча</option>
         <option value="female">Жіноча</option>
         <option value="other">Інша</option>
-    </select><br><br>
+    </select>
     
-    <label for="category">Категорія клієнта:</label>
-    <select id="category" name="category">
+    <label for="category" >Категорія клієнта:</label>
+    <select style=" padding: 12px 20px;
+  margin: 8px 0;" id="category" name="category">
         <option value="">Оберіть категорію</option>
         <option value="vip">VIP</option>
         <option value="regular">Звичайний</option>
         <option value="new">Новий</option>
-    </select><br><br>
+    </select>
     
     <button class="btn" type="button" >Застосувати фільтр</button>
     <button class="btn" type="button" >Скинути фільтр</button>
@@ -111,9 +114,58 @@
         </div>
            <div class="tabs__body">
         <div id="client" class="tab__content">
-          <button class="btn" type="button" >Нарахувати бонуси</button>
+          <button onclick="openModal()" class="btn" type="button" >Нарахувати бонуси</button>
         </div>
+
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 style="margin-bottom: 10px;">Нарахування бонусів</h3>
+
+            <form id="bonusForm">
+              <label for="fullName">ПІБ:</label>
+              <input class="modal-input" type="text" id="fullName" name="fullName" required><br><br>
+
+              <label for="experience">Стаж:</label>
+              <input class="modal-input"type="number" id="experience" name="experience" required><br><br>
+
+              <label for="phoneNumber">Номер телефону:</label>
+              <input class="modal-input"type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10}"><br><br>
+
+              <label for="cardNumber">Номер клубної карти:</label>
+              <input class="modal-input" type="text" id="cardNumber" name="cardNumber" required><br><br>
+
+              <label for="bonus">Кількість бонусів</label>
+              <input class="modal-input"type="text" id="bonus" name="bonus"><br><br>
+              <label for="promoCode">Промокод:</label>
+              <input class="modal-input"type="text" id="promoCode" name="promoCode"><br><br>
+
+              <button type="submit" onclick="applyActions()" class="btn">Застосувати</button>
+            </form>
+          </div>
+        </div>
+
       </div>
     </section>
+<script>
+  const modal = document.getElementById("myModal");
+  const span = document.getElementsByClassName("close")[0];
+
+  function openModal() {
+    modal.style.display = "block";
+  }
+  function closeModal() {
+    modal.style.display = "none";
+  }
+  
+  function applyActions() {
+    const bonusAmount = document.getElementById("bonus").value;
+    const promoCode = document.getElementById("promoCode").value;
+
+    alert("Кількість бонусів: " + bonusAmount + "\nПромокод: " + promoCode);
+    closeModal();
+  }
+</script>
   </body>
 </html>
