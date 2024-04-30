@@ -70,7 +70,11 @@
     <span class="span"></span>
     <section class="container">
       <div class="tabs">
-        <button style="position: fixed; right: 50px" class="btn">
+        <button
+          style="position: fixed; right: 50px"
+          class="btn"
+          onclick="openModal()"
+        >
           Додати витрату
         </button>
         <nav class="costs__tabs-links">
@@ -123,5 +127,72 @@
         </tbody>
       </table>
     </section>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 style="margin-bottom: 10px">Реєстрація витрат</h3>
+        <form id="expenseForm">
+          <label for="expenseItem">Пункт витрати:</label>
+          <input
+            class="modal-input"
+            type="text"
+            id="expenseItem"
+            name="expenseItem"
+            required
+          /><br /><br />
+          <label for="expenseDate">Дата додавання:</label>
+          <input
+            class="modal-input"
+            type="date"
+            id="expenseDate"
+            name="expenseDate"
+            required
+          /><br /><br />
+          <label for="expenseAmount">Сума:</label>
+          <input
+            class="modal-input"
+            type="number"
+            id="expenseAmount"
+            name="expenseAmount"
+            required
+          /><br /><br />
+          <label for="expenseCategory">Категорія витрати:</label>
+          <input
+            class="modal-input"
+            type="text"
+            id="expenseCategory"
+            name="expenseCategory"
+            required
+          /><br /><br />
+          <label for="expenseDescription">Опис:</label><br />
+          <textarea
+            class="modal-input"
+            id="expenseDescription"
+            name="expenseDescription"
+            rows="4"
+            cols="50"
+          ></textarea
+          ><br /><br />
+          <button type="submit" class="btn">Зберегти</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      const modal = document.getElementById('myModal');
+
+      function openModal() {
+        modal.style.display = 'block';
+      }
+
+      function closeModal() {
+        modal.style.display = 'none';
+      }
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      };
+    </script>
   </body>
 </html>

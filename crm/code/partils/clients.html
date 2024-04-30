@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main</title>
     <link rel="stylesheet" href="../../style/index.css" />
+    <link rel="stylesheet" href="../../style/components/modal.css" />
   </head>
   <body>
     <header class="header">
@@ -69,21 +70,157 @@
     </div>
     <span class="span"></span>
     <section class="container">
-      <div class="tabs">
-        <nav class="tabs__links">
-          <a href="#search" class="tabs__link"> Пошук клієнта</a>
-          <a href="#delivery" class="tabs__link">На доставку (список) </a>
+      <div class="client__filters">
+        <select
+          class="client__filters-select"
+          name="filterType"
+          id="filterType"
+        >
+          <option value="" disabled selected hidden style="color: #aaa">
+            Оберіть категорію клієнтів
+          </option>
+          <option value="regular">Постійні</option>
+          <option value="new">Нові</option>
+          <option value="important">Важливі</option>
+          <option value="lost">Втрачені</option>
+          <option value="unwanted">Небажані</option>
+        </select>
+        <input
+          class="client__imput"
+          type="text"
+          id="searchInput"
+          placeholder="Пошук..."
+        />
+        <button class="btn" id="openModalBtn">+ Додати клієнта</button>
+      </div>
+
+      <div class="client__tabs">
+        <nav class="client__tabs-links">
+          <a href="#allClients" class="tabs__link is-active"> Всі клієнти</a>
+          <a href="#newClients" class="tabs__link">Нові клієнти</a>
+          <a href="#inactiveClients" class="tabs__link">Давно не відвідували</a>
         </nav>
       </div>
-      <div class="tabs__body">
-        <div id="search" class="tab__content">
-          <h3>Telegram</h3>
-        </div>
 
-        <div id="delivery" class="tab__content">
-          <h3>Viber</h3>
+      <div class="tabs__body">
+        <div id="allClients" class="tab__content">
+          <h3>Всі клієнти</h3>
+          <ul id="clientsList" class="clients__list">
+            <!-- Тут буде список всіх клієнтів -->
+          </ul>
+        </div>
+        <div id="newClients" class="tab__content">
+          <h3>Нові клієнти</h3>
+          <ul id="newClientsList">
+            <!-- Тут буде список нових клієнтів -->
+          </ul>
+        </div>
+        <div id="inactiveClients" class="tab__content">
+          <h3>Давно не відвідували</h3>
+          <ul id="inactiveClientsList">
+            <!-- Тут буде список неактивних клієнтів -->
+          </ul>
         </div>
       </div>
     </section>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="cancelBtn">&times;</span>
+        <h2 style="margin-bottom: 20px">Реєстрація нового клієнта</h2>
+        <form id="clientForm">
+          <label for="photo" class="modal-photo"></label>
+          <div class="photo-container">
+            <img id="preview" src="" alt="Фото" />
+          </div>
+          <input type="file" id="photo" name="photo" />
+
+          <label for="userName">Ім*я:</label>
+          <input
+            class="modal-input"
+            type="text"
+            id="fullName"
+            name="userName"
+            required
+          />
+          <label for="lastName">Прізвище:</label>
+          <input
+            class="modal-input"
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+          />
+
+          <label for="contact">Контактні дані:</label>
+          <input
+            class="modal-input"
+            type="text"
+            id="contact"
+            name="contact"
+            required
+          />
+
+          <label for="birthdate">Дата народження:</label>
+          <input
+            class="modal-input"
+            type="date"
+            id="birthdate"
+            name="birthdate"
+            required
+          />
+
+          <label for="socialNetworks">Соціальні мережі:</label>
+          <input
+            class="modal-input"
+            type="text"
+            id="socialNetworks"
+            name="socialNetworks"
+            required
+          />
+          <p>Стать:</p>
+          <select class="modal-select" name="genger" id="genger">
+            <option value="" disabled selected hidden>Виберіть стать</option>
+            <option value="male">Жінка</option>
+            <option value="female">Чоловік</option>
+            <option value="anknown">Невідомо</option>
+          </select>
+          <p>Звідки дізнався про нас:</p>
+          <select
+            class="modal-select"
+            name="recommendation"
+            id="recommendation"
+            required
+          >
+            <option value="" disabled selected hidden>Виберіть джерело</option>
+            <option value="telegram">Telegram</option>
+            <option value="instagram">Instagram</option>
+            <option value="advice">Порада знайомих</option>
+          </select>
+
+          <div class="buttons">
+            <button
+              type="button"
+              id="cancelBtn"
+              class="btn"
+              onclick="closeModal()"
+            >
+              Скасувати
+            </button>
+            <button
+              type="button"
+              id="saveBtn"
+              class="btn"
+              onclick="saveClient()"
+            >
+              Додати
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../../../moc/moc.js"></script>
+    <script src="../js/clients.js"></script>
   </body>
 </html>

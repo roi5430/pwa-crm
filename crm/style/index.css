@@ -2,5 +2,6 @@
 @import './base/reset.css';
 @import './layout/header.css';
 @import './layout/main.css';
+@import './layout/clients.css';
 @import './components/button.css';
 @import './components/modal.css';

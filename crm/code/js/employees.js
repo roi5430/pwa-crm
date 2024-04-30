@@ -1,5 +1,3 @@
-//employees
-
 const tableBody = document.getElementById('employees-table-body');
 
 workers.forEach(worker => {
@@ -25,15 +23,12 @@ workers.forEach(worker => {
 function openModal() {
   document.getElementById('myModal').style.display = 'block';
 }
-
-// Функція закриття модального вікна
 function closeModal() {
   document.getElementById('myModal').style.display = 'none';
 }
 
 // Функція застосування даних співробітника
 function applyEmployee() {
-  // Отримання значень з полів вводу
   const fullName = document.getElementById('fullName').value;
   const phoneNumber = document.getElementById('phoneNumber').value;
   const email = document.getElementById('email').value;
@@ -44,11 +39,14 @@ function applyEmployee() {
   const position = document.getElementById('position').value;
   const salary = document.getElementById('salary').value;
   const workSchedule = document.getElementById('workSchedule').value;
-
-  // Виведення отриманих даних у сповіщенні
   alert(
     `ПІБ: ${fullName}\nНомер телефону: ${phoneNumber}\nЕмейл: ${email}\nАдреса проживання: ${address}\nПаспорт: ${passport}\nДоговір про працю: ${employmentContract}\nПосада: ${position}\nЗарплата: ${salary}\nРобочий графік: ${workSchedule}`
   );
 
   closeModal();
 }
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+};

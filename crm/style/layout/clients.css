@@ -1,0 +1,91 @@
+.client__imput,
+.client__filters-select {
+  width: 350px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  outline: none !important;
+  padding: 0px 10px;
+}
+
+.client__filters {
+  display: grid;
+  grid-template-columns: 35% 48% 17%;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.client__tabs-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.client__tabs-links .tabs__link {
+  padding: 0px;
+  justify-content: space-around;
+}
+
+.clients__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.client__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  color: rgb(54, 51, 51);
+}
+
+.client__item:hover,
+.client__item:focus {
+  border-radius: 3px;
+  border: 1px solid #a99e9e;
+  color: aliceblue;
+  background-color: rgb(54, 51, 51);
+  transition: 0.7s;
+}
+
+.client__imput:hover,
+.client__imput:focus,
+.client__filters-select:hover,
+.client__filters-select:focus {
+  border: 1px solid rgb(54, 51, 51);
+  transition: 0.7s;
+}
+
+.client__container {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.client__card {
+  padding-top: 20px;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset -1px 0 0 #e0e0e0;
+}
+
+.client__info {
+  padding-top: 20px;
+  width: 50%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client__name {
+  margin-bottom: 20px;
+}

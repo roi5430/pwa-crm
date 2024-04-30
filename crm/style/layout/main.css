@@ -1,7 +1,10 @@
 .container {
-  width: calc(100% - 300px);
+  /* width: calc(100% - 300px);
   margin: 0 auto;
-  padding: 40px 0 0 260px;
+  padding: 40px 0 0 260px; */
+  width: calc(100% - 350px);
+  margin: 0 auto;
+  padding: 40px 20px 0 300px;
 }
 
 .tabs {
@@ -148,4 +151,23 @@ select {
   flex-direction: column;
   align-items: flex-start;
   gap: 7px;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.back-button:hover,
+.back-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

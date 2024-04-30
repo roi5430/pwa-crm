@@ -406,8 +406,9 @@ const workers = [
   },
 ];
 //Додайте картинки.
-const castumers = [
+const customers = [
   {
+    id: '1',
     userName: 'Ivan',
     lastName: 'Petrenko',
     birthDate: '01.01.1990',
@@ -430,6 +431,7 @@ const castumers = [
     ],
   },
   {
+    id: '2',
     userName: 'Maria',
     lastName: 'Shevchenko',
     birthDate: '15.05.1995',
@@ -452,6 +454,7 @@ const castumers = [
     ],
   },
   {
+    id: '3',
     userName: 'Mykhailo',
     lastName: 'Boyko',
     birthDate: '20.10.2000',
@@ -475,6 +478,7 @@ const castumers = [
   },
 
   {
+    id: '4',
     userName: 'Sofia',
     lastName: 'Kovalenko',
     birthDate: '08.03.1985',
@@ -497,6 +501,7 @@ const castumers = [
     ],
   },
   {
+    id: '5',
     userName: 'Dmytro',
     lastName: 'Zhuk',
     birthDate: '12.07.1990',
@@ -519,6 +524,7 @@ const castumers = [
     ],
   },
   {
+    id: '6',
     userName: 'Olena',
     lastName: 'Petrenko',
     birthDate: '20.05.2005',

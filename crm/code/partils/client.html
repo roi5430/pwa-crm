@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client</title>
+    <link rel="stylesheet" href="../../style/index.css" />
+  </head>
+  <body>
+    <main>
+      <section class="client__container">
+        <button class="back-button" onclick="goBack()">&#8592;</button>
+        <div class="client__card" id="clientCard"></div>
+        <div class="client__info" id="clientInfo"></div>
+      </section>
+    </main>
+
+    <script src="../../../moc/moc.js"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const clientId = urlParams.get('id');
+      const client = customers.find(c => c.id === clientId);
+
+      if (client) {
+        const clientCard = document.getElementById('clientCard');
+        clientCard.innerHTML = `
+                <h2 class="client__name"> ${client.userName} ${client.lastName}</h2>
+                <p>Дата народження: ${client.birthDate}</p>
+                <p>Email: ${client.contactInformation.email}</p>
+                <p> Контактний номер:${client.contactInformation.phone}</p>
+                <p>Звідки прийшов: ${client.source}</p>`;
+      } else {
+        console.error('Клієнт не знайдений');
+      }
+
+      if (client) {
+        const clientInfo = document.getElementById('clientInfo');
+        clientInfo.innerHTML = `
+                <p>Середній чек: ${client.averageCheck}</p>
+                <p>Історія відвідувань: ${client.visitHistory
+                  .map(
+                    visit => `
+                  <p>Останнє відвідування ${visit.date} </p>
+                  <p>Відгук: ${visit.clientFeedback}</p>
+                  ${visit.serviceAndMaster}`
+                  )
+                  .join('<br>')}</p>
+                <p>Баланс: ${client.balance}</p>`;
+      } else {
+        console.error('Клієнт не знайдений');
+      }
+    </script>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>
